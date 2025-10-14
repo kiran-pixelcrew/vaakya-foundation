@@ -61,12 +61,15 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Workshop Banner */}
-      <div className="bg-black py-4 px-6 text-center border-t border-gray-700">
+      <div className="bg-black py-4 px-6 -mt-[60px] text-center">
         <p className="text-white text-lg">
           Join our upcoming workshop to empower kids and spark smiles!{" "}
-          <Link href="/workshop" className="text-[#FFD45C] font-semibold hover:underline transition-all">
+          <Link
+            href="/workshop"
+            className="text-[#FFD45C] font-semibold hover:underline transition-all"
+          >
             Register now.
           </Link>
         </p>
