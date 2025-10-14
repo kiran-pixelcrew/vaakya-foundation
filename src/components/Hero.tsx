@@ -31,8 +31,8 @@ const words = [
 export const Hero = () => {
   return (
     <>
-      <div className="h-screen bg-[url('/hero0.png')] bg-contain bg-no-repeat bg-center flex items-center justify-start px-10">
-        <div className="ml-2">
+      <div className="bg-[url('/hero0.png')] mt-[65px] bg-contain bg-no-repeat bg-center flex items-center justify-start h-[90vh] px-20">
+        <div className="">
           <TextGenerateEffect
             wordsArray={words}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl max-w-4xl font-bold text-left"
@@ -62,7 +62,7 @@ export const Hero = () => {
         </div>
       </div>
       {/* Workshop Banner */}
-      <div className="bg-black py-4 px-6 -mt-[58px] text-center">
+      <div className="bg-black py-4 px-6 text-center">
         <p className="text-white text-lg">
           Join our upcoming workshop to empower kids and spark smiles!{" "}
           <Link

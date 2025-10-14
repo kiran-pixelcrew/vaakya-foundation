@@ -32,7 +32,6 @@ export default function RootLayout({
       >
         <Analytics />
         <Navbar />
-
         {children}
       </body>
     </html>

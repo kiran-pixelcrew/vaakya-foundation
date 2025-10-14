@@ -22,9 +22,9 @@ const Navbar = () => {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "Projects", href: "/projects" },
-    { name: "Contact", href: "/contact" },
-    { name: "Blog", href: "/blog" },
+    { name: "About Us", href: "#aboutus" },
+    { name: "Programs", href: "#programs" },
+    { name: "Impact", href: "#impact" },
   ];
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -40,7 +40,7 @@ const Navbar = () => {
           : "bg-white/90 backdrop-blur-sm"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 sm:px-6 lg:px-20">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <motion.div
@@ -60,88 +60,99 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item, index) => (
-              <motion.div
-                key={item.name}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-              >
+            {navItems.map((item) => (
+              <div key={item.name}>
                 <Link
                   href={item.href}
-                  className="relative font-medium transition-colors duration-300 group text-black hover:text-gray-600"
+                  className="relative font-medium transition-colors duration-200 text-black hover:text-yellow-600"
                 >
                   {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-500 transition-all duration-200 hover:w-full"></span>
                 </Link>
-              </motion.div>
+              </div>
             ))}
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
-            >
-              <Button className="bg-[#FFD45C] text-black font-bold hover:bg-yellow-400 transition-colors duration-300">
-                Support Chiguru
-              </Button>
-            </motion.div>
+            <Button className="bg-[#FFD45C] text-black font-medium transition-all duration-200 cursor-pointer hover:bg-yellow-400">
+              Get Involved
+            </Button>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <motion.button
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+            <button
               onClick={toggleMenu}
-              className="p-2 rounded-md text-black"
+              className="p-2 rounded-md text-black transition-colors duration-200 hover:bg-yellow-100"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </motion.button>
+            </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Navigation Overlay */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden bg-white/95 backdrop-blur-md border-t"
-          >
-            <div className="px-4 py-4 space-y-4">
-              {navItems.map((item, index) => (
-                <motion.div
-                  key={item.name}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
-                >
-                  <Link
-                    href={item.href}
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 md:hidden"
+              onClick={() => setIsOpen(false)}
+            />
+
+            {/* Sidebar */}
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="fixed top-0 right-0 h-full w-80 bg-white shadow-xl z-50 md:hidden"
+            >
+              <div className="flex flex-col h-full">
+                {/* Header */}
+                <div className="flex items-center justify-between p-6 border-b border-gray-200">
+                  <Image
+                    src="/logo.png"
+                    alt="Vaakya Foundation Logo"
+                    width={100}
+                    height={32}
+                    className="h-8 w-auto"
+                  />
+                  <button
                     onClick={() => setIsOpen(false)}
-                    className="block text-black font-medium py-2 hover:text-gray-600 transition-colors"
+                    className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
                   >
-                    {item.name}
-                  </Link>
-                </motion.div>
-              ))}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: 0.4 }}
-                className="pt-2"
-              >
-                <Button className="w-full bg-[#FFD45C] text-black font-bold hover:bg-yellow-400 transition-colors">
-                  Support Chiguru
-                </Button>
-              </motion.div>
-            </div>
-          </motion.div>
+                    <X size={24} className="text-gray-600" />
+                  </button>
+                </div>
+
+                {/* Navigation Items */}
+                <div className="flex-1 px-6 py-8 space-y-6">
+                  {navItems.map((item) => (
+                    <div key={item.name}>
+                      <Link
+                        href={item.href}
+                        onClick={() => setIsOpen(false)}
+                        className="block text-gray-800 font-medium text-lg py-3 transition-colors duration-200 hover:text-yellow-600"
+                      >
+                        {item.name}
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Footer with Button */}
+                <div className="p-6 border-t border-gray-200">
+                  <Button className="w-full bg-[#FFD45C] text-black font-semibold py-4 text-lg transition-colors duration-200 hover:bg-yellow-400">
+                    Get Involved
+                  </Button>
+                </div>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </motion.nav>
