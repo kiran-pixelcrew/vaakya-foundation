@@ -61,9 +61,8 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-
       {/* Workshop Banner */}
-      <div className="bg-black py-4 px-6 -mt-[60px] text-center">
+      <div className="bg-black py-4 px-6 -mt-[58px] text-center">
         <p className="text-white text-lg">
           Join our upcoming workshop to empower kids and spark smiles!{" "}
           <Link
