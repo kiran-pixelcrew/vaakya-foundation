@@ -40,7 +40,7 @@ const Navbar = () => {
           : "bg-white/90 backdrop-blur-sm"
       }`}
     >
-      <div className="mx-auto px-4 sm:px-6 lg:px-20">
+      <div className="mx-auto px-4 sm:px-6 items-center lg:px-20">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <motion.div
