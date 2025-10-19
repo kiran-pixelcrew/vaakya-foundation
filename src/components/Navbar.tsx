@@ -5,6 +5,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Button } from "./ui/button";
+import { motion } from "motion/react";
 
 const Navbar = () => {
   const pathname = usePathname() || "";
@@ -181,11 +183,7 @@ const Navbar = () => {
               ? "bg-white/80 shadow-xl backdrop-blur-md"
               : "bg-transparent shadow-none backdrop-blur-0"
           }
-          ${
-            hidden
-              ? "pointer-events-none opacity-0"
-              : "translate-y-0 opacity-100"
-          }
+          ${hidden ? " -translate-y-20 opacity-0" : "translate-y-0 opacity-100"}
         `}
       >
         <div className="mx-auto flex h-full w-full max-w-7xl items-center justify-between px-4 md:px-8">
@@ -218,7 +216,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden space-x-4 text-sm md:flex md:space-x-8 md:text-base text-[#010101]">
+          <div className="hidden items-center space-x-4 text-sm md:flex md:space-x-8 md:text-base text-[#010101]">
             {navLinks.map((link) => {
               const isActive = (() => {
                 if (link.link === "/") {
@@ -281,6 +279,18 @@ const Navbar = () => {
                 </Link>
               );
             })}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
+              whileTap={{ scale: 0.8 }}
+            >
+              <Link href={"#donate"} className="cursor-pointer ml-2">
+                <Button className="bg-[#FFD45C] hover:bg-[#FFD45C]/90 text-[#010101] cursor-pointer font-bold shadow-sm px-6 py-2">
+                  Get Involved
+                </Button>
+              </Link>
+            </motion.div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -385,6 +395,42 @@ const Navbar = () => {
               </Link>
             );
           })}
+
+          {/* Mobile Get Involved Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.4,
+              delay: mobileMenuOpen ? navLinks.length * 0.05 + 0.1 : 0,
+            }}
+            whileTap={{ scale: 0.95 }}
+            className="mt-8 w-4/5 max-w-sm"
+          >
+            <Link
+              href={"#contact"}
+              onClick={(e) => {
+                e.preventDefault();
+                const targetElement = document.querySelector("#contact");
+                if (targetElement) {
+                  setMobileMenuOpen(false);
+                  setTimeout(() => {
+                    targetElement.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                  }, 300);
+                  setTimeout(() => {
+                    window.history.pushState(null, "", "#contact");
+                  }, 700);
+                }
+              }}
+            >
+              <Button className="w-full bg-[#FFD45C] hover:bg-[#FFD45C]/90 text-[#010101] font-bold text-xl py-6 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-[#FFD45C] hover:border-[#FFB800]">
+                Get Involved
+              </Button>
+            </Link>
+          </motion.div>
         </div>
       </div>
     </nav>
