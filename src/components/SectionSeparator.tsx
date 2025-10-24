@@ -18,7 +18,7 @@ const SectionSeparator: React.FC<SectionSeparatorProps> = ({
           <h2 className="mb-4 text-4xl font-bold text-balance text-[#00] capitalize sm:text-4xl">
             {title}
           </h2>
-          <p className="max-w-4xl text-sm tracking-wide text-balance text-[#000] sm:text-lg">
+          <p className="max-w-4xl text-sx tracking-wide text-balance text-[#000] sm:text-base">
             {subtitle}
           </p>
         </div>
