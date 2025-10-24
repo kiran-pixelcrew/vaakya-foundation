@@ -27,12 +27,12 @@ export const Vaakyatext = () => {
   return (
     <div
       ref={ref}
-      className="container h-[140vh] flex items-center justify-center mx-auto"
+      className="container overflow-x-hidden h-[140vh] flex items-center justify-center mx-auto"
     >
       <div className="-space-y-12">
         <motion.h1
           style={{ x: x0, opacity: opacity0 }}
-          className="text-[115px] text-balance text-black text-center uppercase font-semibold outline-text"
+          className="text-[115px] text-balance text-center uppercase font-semibold outline-text"
         >
           Vaakya Foundation
         </motion.h1>
@@ -46,7 +46,7 @@ export const Vaakyatext = () => {
 
         <motion.h1
           style={{ x: x2, opacity: opacity2 }}
-          className="text-[115px] font-helvetica text-balance text-center uppercase font-semibold"
+          className="text-[115px] text-black/90 font-helvetica text-balance text-center uppercase font-semibold"
         >
           Vaakya Foundation
         </motion.h1>

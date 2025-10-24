@@ -163,7 +163,7 @@ const Navbar = () => {
     },
     {
       name: "About us",
-      link: "#about",
+      link: "#aboutus",
     },
     {
       name: "Programs",

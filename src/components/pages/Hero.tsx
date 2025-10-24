@@ -177,7 +177,7 @@ export const Hero = () => {
               }}
             >
               <Link href="#contact">
-                <Button className="bg-[#FFD45C] text-black font-medium py-4 sm:py-6 px-6 sm:px-8 rounded-lg text-lg sm:text-xl hover:bg-yellow-400 transition-colors border-0 w-full sm:w-auto">
+                <Button className="bg-[#FFD45C] text-black font-medium py-4 sm:py-6 px-6 sm:px-8 rounded-lg text-base hover:bg-yellow-400 transition-colors border-0 w-full sm:w-auto">
                   Protect a Child Today
                 </Button>
               </Link>
@@ -202,7 +202,7 @@ export const Hero = () => {
               <Link href="#volunteer">
                 <Button
                   variant="outline"
-                  className="border-2 border-white text-white font-medium py-4 sm:py-6 px-6 sm:px-8 rounded-lg text-lg sm:text-xl hover:bg-white hover:text-black transition-colors bg-transparent w-full sm:w-auto"
+                  className="border-2 border-white text-white font-medium py-4 sm:py-6 px-6 sm:px-8 rounded-lg text-base hover:bg-white hover:text-black transition-colors bg-transparent w-full sm:w-auto"
                 >
                   Become Volunteer
                 </Button>

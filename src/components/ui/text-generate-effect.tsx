@@ -12,7 +12,7 @@ export const TextGenerateEffect = ({
   wordsArray,
   className,
   filter = true,
-  duration = 0.5,
+  duration = 0.8,
   cycleDuration = 4000,
 }: {
   wordsArray: WordObject[][];
