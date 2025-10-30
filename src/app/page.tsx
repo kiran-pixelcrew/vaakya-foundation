@@ -4,6 +4,7 @@ import { Hero } from "@/components/pages/Hero";
 import Stat from "@/components/pages/Stat";
 import VisionMission from "@/components/pages/VisionMission";
 import WhatWeDo from "@/components/pages/WhatWeDo";
+import WhyVaakya from "@/components/pages/WhyVaakya";
 import SectionSeparator from "@/components/SectionSeparator";
 import { Vaakyatext } from "@/components/Vaakyatext";
 
@@ -16,9 +17,14 @@ export default function Home() {
       <section className="container mx-auto py-6">
         <VisionMission />
       </section>
+      <section>
+        <WhyVaakya />
+      </section>
       <SectionSeparator
-        title="Statistics in numbers"
-        subtitle="Vakya believes in acting before harm—creating informed communities that safeguard every child’s."
+        title="Impact That Speaks for Itself"
+        subtitle="With over 2000 students trained and growing presence across India, Vakya Foundation
+        continues to strengthen awareness and prevention where it matters most."
+        sTcN="text-normal"
       />
       <section className="container mx-auto">
         <Stat />
