@@ -1,18 +1,17 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { useUser } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
 import { Edit, Trash2, Save, X } from "lucide-react";
 
 const YtVideo = () => {
-  const { user, isLoaded } = useUser();
   const [videoUrl, setVideoUrl] = useState(
     "https://www.youtube.com/embed/oFxSlioYJQI?si=yx2wymLRYruKM8ls"
   );
   const [isEditing, setIsEditing] = useState(false);
   const [newVideoUrl, setNewVideoUrl] = useState("");
-  const [isAdmin, setIsAdmin] = useState(false);
+  // Admin features disabled - will be re-enabled with authentication
+  const isAdmin = false;
 
   // Load video URL from localStorage on mount
   useEffect(() => {
@@ -21,15 +20,6 @@ const YtVideo = () => {
       setVideoUrl(savedUrl);
     }
   }, []);
-
-  // Check if user is admin
-  useEffect(() => {
-    if (isLoaded && user) {
-      // Check if user has admin role in public metadata
-      const userRole = user.publicMetadata?.role as string | undefined;
-      setIsAdmin(userRole === "admin");
-    }
-  }, [isLoaded, user]);
 
   const handleEdit = () => {
     setIsEditing(true);
