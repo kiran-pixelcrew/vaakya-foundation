@@ -30,11 +30,10 @@ const Stat = () => {
   };
 
   return (
-    // <section className="py-20 px-4 w-full bg-[#FFD45C] dark:bg-slate-950">
-    <section className="py-12 w-full container mx-auto flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 px-4 md:px-0">
+    <section className="py-20 px-4 sm:px-20 w-full flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
       <div className="">
         <Image
-          src={"/stat-img.png"}
+          src={"/stat.png"}
           width={800}
           height={500}
           alt="stat image"
@@ -42,7 +41,7 @@ const Stat = () => {
         />
       </div>
       <motion.div
-        className="max-w-2xl mx-auto w-full md:w-1/2"
+        className="mx-auto w-full md:w-1/2 lg:w-2/5"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"

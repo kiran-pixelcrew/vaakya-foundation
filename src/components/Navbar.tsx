@@ -186,7 +186,7 @@ const Navbar = () => {
           ${hidden ? " -translate-y-20 opacity-0" : "translate-y-0 opacity-100"}
         `}
       >
-        <div className="mx-auto flex h-full w-full items-center justify-between px-4 md:px-8 lg:px-32">
+        <div className="mx-auto flex h-full w-full items-center justify-between px-4 md:px-8 lg:px-20">
           <div className="flex items-center">
             <Link
               href={"/"}

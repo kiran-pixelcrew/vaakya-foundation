@@ -22,10 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable}  antialiased overflow-x-hidden`}>
+      <body className={`${poppins.variable} antialiased overflow-x-hidden`}>
         <Analytics />
         <Navbar />
-        <main className="relative">{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );

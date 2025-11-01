@@ -14,7 +14,7 @@ export default function Home() {
       <section>
         <Hero />
       </section>
-      <section className="container mx-auto py-6">
+      <section>
         <VisionMission />
       </section>
       <section>
@@ -26,7 +26,7 @@ export default function Home() {
         continues to strengthen awareness and prevention where it matters most."
         sTcN="text-normal"
       />
-      <section className="container mx-auto">
+      <section>
         <Stat />
       </section>
       <SectionSeparator
