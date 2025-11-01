@@ -85,7 +85,7 @@ export const Hero = () => {
     <>
       {/* Desktop Version */}
       <motion.section
-        className="relative overflow-hidden mt-20 hidden md:flex items-center justify-start h-[85vh] px-4 sm:px-8 md:px-12 lg:px-32"
+        className="relative overflow-hidden mt-20 hidden md:flex items-center justify-start h-[85vh] px-4 sm:px-8 md:px-12 lg:px-20"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -100,7 +100,7 @@ export const Hero = () => {
           className="object-cover object-center"
         />
         <motion.div
-          className="relative z-10 max-w-5xl"
+          className="relative z-10 max-w-4xl"
           initial={{ opacity: 0, x: -15 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{
@@ -111,7 +111,7 @@ export const Hero = () => {
         >
           <TextGenerateEffect
             wordsArray={words}
-            className="text-2xl sm:text-3xl md:text-4xl max-w-3xl text-balance lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-left"
+            className="text-2xl sm:text-3xl md:text-4xl max-w-4xl text-balance lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-left"
           />
           <motion.div
             className="mt-4 text-base sm:text-lg text-balance text-white max-w-xl"
