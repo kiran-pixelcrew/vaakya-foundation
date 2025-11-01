@@ -7,6 +7,13 @@ import React, { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion } from "motion/react";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  SignUpButton,
+  UserButton,
+} from "@clerk/nextjs";
 
 const Navbar = () => {
   const pathname = usePathname() || "";
@@ -170,6 +177,10 @@ const Navbar = () => {
       link: "#programs",
     },
     {
+      name: "Chiguru",
+      link: "/chiguru",
+    },
+    {
       name: "Impact",
       link: "#impact",
     },
@@ -186,7 +197,7 @@ const Navbar = () => {
           ${hidden ? " -translate-y-20 opacity-0" : "translate-y-0 opacity-100"}
         `}
       >
-        <div className="mx-auto flex h-full w-full items-center justify-between px-4 md:px-8 lg:px-20">
+        <div className="mx-auto flex h-full w-full items-center justify-between px-4 md:px-8 lg:px-40">
           <div className="flex items-center">
             <Link
               href={"/"}

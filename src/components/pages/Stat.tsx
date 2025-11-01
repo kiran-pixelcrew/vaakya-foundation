@@ -30,7 +30,7 @@ const Stat = () => {
   };
 
   return (
-    <section className="py-20 px-4 sm:px-20 w-full flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+    <section className="py-10 px-4 sm:px-40 w-full flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
       <div className="">
         <Image
           src={"/stat.png"}

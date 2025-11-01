@@ -18,7 +18,7 @@ const SectionSeparator: React.FC<SectionSeparatorProps> = ({
   return (
     <section
       id={id}
-      className="relative sm:px-0 px-4 w-full bg-[#fff] pt-12 md:px-20"
+      className="relative sm:px-0 px-4 w-full bg-[#fff] pt-12 md:px-40"
     >
       <div className="text-left">
         <h2

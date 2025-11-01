@@ -36,8 +36,8 @@ const teamMembers: TeamMember[] = [
 const Team = () => {
   return (
     <div className="min-h-[80vh] overflow-hidden w-full flex items-start py-12 md:py-16 lg:py-20">
-      <div className="container md:px-20 max-w-9xl px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
+      <div className="container md:px-40 sm:max-w-9xl px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-16">
           {teamMembers.map((member) => (
             <div key={member.id} className="flex flex-col">
               <div className="relative w-full aspect-[3/4] overflow-hidden group cursor-pointer">
@@ -48,7 +48,7 @@ const Team = () => {
                   fill
                 />
                 {/* Hover Overlay */}
-                <div className="absolute overflow-hidden inset-0 bg-[#FFD45C] opacity-0 group-hover:opacity-95 transition-opacity duration-300 flex items-center justify-center p-12">
+                <div className="absolute overflow-hidden inset-0 bg-[#FFD45C] opacity-0 group-hover:opacity-95 transition-opacity duration-300 flex items-center justify-center sm:p-12 lg:p-6">
                   <p className="text-gray-900 text-sm md:text-base leading-relaxed text-start text-balance">
                     {member.bio}
                   </p>

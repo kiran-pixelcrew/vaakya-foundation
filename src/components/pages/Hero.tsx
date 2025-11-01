@@ -85,7 +85,7 @@ export const Hero = () => {
     <>
       {/* Desktop Version */}
       <motion.section
-        className="relative overflow-hidden mt-20 hidden md:flex items-center justify-start h-[85vh] px-4 sm:px-8 md:px-12 lg:px-20"
+        className="relative overflow-hidden mt-20 hidden md:flex items-center justify-start h-[85vh] px-4 sm:px-8 md:px-12 lg:px-40"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}

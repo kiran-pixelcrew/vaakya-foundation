@@ -1,5 +1,7 @@
 "use client";
 
+import Banner from "@/components/Banner";
+import ChiguruPage from "@/components/pages/Chiguru";
 import { Hero } from "@/components/pages/Hero";
 import Partners from "@/components/pages/Partners";
 import Stat from "@/components/pages/Stat";
@@ -7,6 +9,7 @@ import Team from "@/components/pages/Team";
 import VisionMission from "@/components/pages/VisionMission";
 import WhatWeDo from "@/components/pages/WhatWeDo";
 import WhyVaakya from "@/components/pages/WhyVaakya";
+import YtVideo from "@/components/pages/YtVideo";
 import SectionSeparator from "@/components/SectionSeparator";
 import { Vaakyatext } from "@/components/Vaakyatext";
 
@@ -31,13 +34,13 @@ export default function Home() {
       <section>
         <Stat />
       </section>
-      <SectionSeparator
+      {/* <SectionSeparator
         title="What we do?"
         subtitle="Children are the most vulnerable members of society, and without proper education and support, they are at greater risk of suffering long-lasting damage from issues like abuse, addiction, and bullying"
       />
       <section>
         <WhatWeDo />
-      </section>
+      </section> */}
       <SectionSeparator
         title="One team one dream"
         subtitle="Children are the most vulnerable members of society, and without proper  education and support, they are at
@@ -49,6 +52,27 @@ greater risk of suffering  long-lasting damage from issues like abuse, addiction
       <section>
         <Partners />
       </section>
+      <section>
+        <YtVideo />
+      </section>
+      <SectionSeparator
+        title="Chiguru - Nurturing Growth and Awareness"
+        subtitle="Project Chiguru helps children, parents, and educators grow together
+          through awareness on bullying, cyber safety, sexuality education, and
+          mental health—planting the seeds of safety and resilience in every
+          community."
+      />
+      <section>
+        <ChiguruPage />
+      </section>
+      <Banner
+        title="Workshops that create awareness"
+        subtitle="Vakya Foundation conducts interactive workshops for students, parents, and educators—helping them understand safety, emotional well-being, and digital responsibility in simple, practical ways."
+        ctaText1="Request a Workshop"
+        ctaLink1="/workshops"
+        ctaText2="Explore Upcoming Sessions"
+        ctaLink2="/workshops"
+      />
       <section>
         <Vaakyatext />
       </section>
