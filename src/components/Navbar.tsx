@@ -7,13 +7,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion } from "motion/react";
-import {
-  SignedIn,
-  SignedOut,
-  SignInButton,
-  SignUpButton,
-  UserButton,
-} from "@clerk/nextjs";
 
 const Navbar = () => {
   const pathname = usePathname() || "";

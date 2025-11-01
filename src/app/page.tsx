@@ -7,7 +7,6 @@ import Partners from "@/components/pages/Partners";
 import Stat from "@/components/pages/Stat";
 import Team from "@/components/pages/Team";
 import VisionMission from "@/components/pages/VisionMission";
-import WhatWeDo from "@/components/pages/WhatWeDo";
 import WhyVaakya from "@/components/pages/WhyVaakya";
 import YtVideo from "@/components/pages/YtVideo";
 import SectionSeparator from "@/components/SectionSeparator";
