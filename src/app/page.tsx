@@ -1,6 +1,7 @@
 "use client";
 
 import Banner from "@/components/Banner";
+import CaseStudy from "@/components/pages/CaseStudy";
 import ChiguruPage from "@/components/pages/Chiguru";
 import { Hero } from "@/components/pages/Hero";
 import Partners from "@/components/pages/Partners";
@@ -24,15 +25,7 @@ export default function Home() {
       <section>
         <WhyVaakya />
       </section>
-      <SectionSeparator
-        title="Impact That Speaks for Itself"
-        subtitle="With over 2000 students trained and growing presence across India, Vakya Foundation
-        continues to strengthen awareness and prevention where it matters most."
-        sTcN="text-normal"
-      />
-      <section>
-        <Stat />
-      </section>
+
       {/* <SectionSeparator
         title="What we do?"
         subtitle="Children are the most vulnerable members of society, and without proper education and support, they are at greater risk of suffering long-lasting damage from issues like abuse, addiction, and bullying"
@@ -72,6 +65,22 @@ greater risk of suffering  long-lasting damage from issues like abuse, addiction
         ctaText2="Explore Upcoming Sessions"
         ctaLink2="/workshops"
       />
+      <SectionSeparator
+        title="Impact That Speaks for Itself"
+        subtitle="With over 2000 students trained and growing presence across India, Vakya Foundation
+        continues to strengthen awareness and prevention where it matters most."
+        sTcN="text-normal"
+      />
+      <section>
+        <Stat />
+      </section>
+      <SectionSeparator
+        title="Case studies: Lives Touched, Futures Protected"
+        subtitle="See how Chiguru transformed lives. One workshop, lifelong safety."
+      />
+      <section>
+        <CaseStudy />
+      </section>
       <section>
         <Vaakyatext />
       </section>
