@@ -41,7 +41,7 @@ const Stat = () => {
         />
       </div>
       <motion.div
-        className="mx-auto w-full md:w-1/2 lg:w-2/5"
+        className="w-full md:w-1/2 lg:w-2/5"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
