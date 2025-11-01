@@ -12,6 +12,7 @@ import WhyVaakya from "@/components/pages/WhyVaakya";
 import YtVideo from "@/components/pages/YtVideo";
 import SectionSeparator from "@/components/SectionSeparator";
 import { Vaakyatext } from "@/components/Vaakyatext";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -58,6 +59,8 @@ greater risk of suffering  long-lasting damage from issues like abuse, addiction
         <ChiguruPage />
       </section>
       <Banner
+        image
+        bgColor="#EDF8FF"
         title="Workshops that create awareness"
         subtitle="Vakya Foundation conducts interactive workshops for students, parents, and educators—helping them understand safety, emotional well-being, and digital responsibility in simple, practical ways."
         ctaText1="Request a Workshop"
@@ -81,9 +84,38 @@ greater risk of suffering  long-lasting damage from issues like abuse, addiction
       <section>
         <CaseStudy />
       </section>
-      <section>
-        <Vaakyatext />
+      <Banner
+        bgColor="#FFF7E1"
+        title="Grow the Safety Tree"
+        cn="max-w-xl"
+        subtitle="Your gift plants resilience in young hearts. Together, we help every child
+bloom safely and confidently. One workshop can change a lifetime."
+        ctaText1="Support a Workshop"
+        ctaLink1="/workshop"
+        ctaText2="Become a Volunteer"
+        ctaLink2="/workshop"
+      />
+      <section className="relative md:px-40 px-4 -mt-44 flex items-center justify-between">
+        <div className="">
+          <p className="max-w-xl text-2xl">
+            Every child deserves a safe tomorrow. Your support today builds
+            courage, protects smiles, and turns fear into hope for thousands. Be
+            their shield.
+          </p>
+        </div>
+        <div className="aspect-square">
+          <Image
+            src={"/vaakya-below.png"}
+            className="z-99"
+            width={600}
+            height={600}
+            alt="low"
+          />
+        </div>
       </section>
+      {/* <section>
+        <Vaakyatext />
+      </section> */}
     </div>
   );
 }
