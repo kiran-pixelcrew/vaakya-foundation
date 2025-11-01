@@ -1,6 +1,7 @@
 "use client";
 
 import { Hero } from "@/components/pages/Hero";
+import Partners from "@/components/pages/Partners";
 import Stat from "@/components/pages/Stat";
 import Team from "@/components/pages/Team";
 import VisionMission from "@/components/pages/VisionMission";
@@ -44,6 +45,9 @@ greater risk of suffering  long-lasting damage from issues like abuse, addiction
       />
       <section>
         <Team />
+      </section>
+      <section>
+        <Partners />
       </section>
       <section>
         <Vaakyatext />
