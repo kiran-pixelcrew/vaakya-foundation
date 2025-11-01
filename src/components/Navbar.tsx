@@ -177,7 +177,7 @@ const Navbar = () => {
   return (
     <nav aria-label="Primary navigation">
       <div
-        className={`fixed inset-x-0 top-0 z-50 h-20 transition-all duration-300 will-change-transform
+        className={`fixed inset-x-0 top-0 z-50 h-20  transition-all duration-300 will-change-transform
           ${
             scrolled
               ? "bg-white/80 shadow-xl backdrop-blur-md"
@@ -186,7 +186,7 @@ const Navbar = () => {
           ${hidden ? " -translate-y-20 opacity-0" : "translate-y-0 opacity-100"}
         `}
       >
-        <div className="mx-auto flex h-full w-full max-w-7xl items-center justify-between px-4 md:px-8">
+        <div className="mx-auto flex h-full w-full items-center justify-between px-4 md:px-8 lg:px-32">
           <div className="flex items-center">
             <Link
               href={"/"}

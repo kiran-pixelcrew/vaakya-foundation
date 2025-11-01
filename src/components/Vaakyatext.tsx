@@ -27,7 +27,7 @@ export const Vaakyatext = () => {
   return (
     <div
       ref={ref}
-      className="container overflow-x-hidden h-[140vh] flex items-center justify-center mx-auto"
+      className="overflow-x-hidden h-[140vh] flex items-center justify-center mx-auto"
     >
       <div className="-space-y-12">
         <motion.h1
