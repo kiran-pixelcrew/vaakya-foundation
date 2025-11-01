@@ -2,6 +2,7 @@
 
 import { Hero } from "@/components/pages/Hero";
 import Stat from "@/components/pages/Stat";
+import Team from "@/components/pages/Team";
 import VisionMission from "@/components/pages/VisionMission";
 import WhatWeDo from "@/components/pages/WhatWeDo";
 import WhyVaakya from "@/components/pages/WhyVaakya";
@@ -35,6 +36,14 @@ export default function Home() {
       />
       <section>
         <WhatWeDo />
+      </section>
+      <SectionSeparator
+        title="One team one dream"
+        subtitle="Children are the most vulnerable members of society, and without proper  education and support, they are at
+greater risk of suffering  long-lasting damage from issues like abuse, addiction, and bullying"
+      />
+      <section>
+        <Team />
       </section>
       <section>
         <Vaakyatext />
