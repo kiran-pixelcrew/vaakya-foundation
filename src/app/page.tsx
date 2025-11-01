@@ -131,7 +131,7 @@ export default function Home() {
       <Image
         src={"/banner.png"}
         alt="banner"
-        className="hidden md:block object-cover"
+        className="hidden md:block object-contain"
         priority
         fill
       />
@@ -139,7 +139,7 @@ export default function Home() {
       <Image
         src={"/mobileBanner.png"}
         alt="mobile banner"
-        className="block md:hidden object-cover"
+        className="block md:hidden object-contain"
         priority
         fill
       />
