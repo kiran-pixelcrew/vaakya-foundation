@@ -126,11 +126,20 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="relative w-full h-screen">
+      {/* Desktop Banner */}
       <Image
         src={"/banner.png"}
         alt="banner"
-        className="object-cover"
+        className="hidden md:block object-cover"
+        priority
+        fill
+      />
+      {/* Mobile Banner */}
+      <Image
+        src={"/mobileBanner.png"}
+        alt="mobile banner"
+        className="block md:hidden object-cover"
         priority
         fill
       />
