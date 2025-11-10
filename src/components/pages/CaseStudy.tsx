@@ -59,7 +59,7 @@ const CaseStudy = () => {
 
   return (
     <section className="w-full py-16 md:px-40 px-4 bg-white">
-      <div className="max-w-7xl mx-auto">
+      <div className="">
         {/* Banner Image */}
         <div className="mb-8 rounded-lg overflow-hidden">
           <Image

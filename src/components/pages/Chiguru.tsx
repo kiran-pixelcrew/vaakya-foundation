@@ -33,7 +33,7 @@ export default function ChiguruPage() {
 
   return (
     <div className="min-h-screen bg-white py-12 px-4 md:px-40">
-      <div className="max-w-7xl mx-auto">
+      <div className="">
         {/* Tabs */}
         <div className="mb-12">
           <div className="flex flex-wrap gap-3 md:gap-4 justify-center md:justify-start">

@@ -94,8 +94,10 @@ greater risk of suffering  long-lasting damage from issues like abuse, addiction
         <TestimonialsWithInfiniteScroll />
       </section>
       <SectionSeparator
+        tcN="text-center"
         title="Frequently Asked Questions"
         subtitle="Answers to common questions about Vaakya Foundation and our initiatives."
+        sTcN="text-center"
       />
 
       <section>
