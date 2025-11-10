@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
 type FAQItem = {
   q: string;
@@ -9,44 +9,44 @@ type FAQItem = {
 
 const faqs: FAQItem[] = [
   {
-    q: 'What does PixelCrew actually do?',
-    a: 'We build brands and digital experiences—brand identity systems, UI/UX, and modern websites. From strategy and visual design to production-ready front‑end, we handle end‑to‑end.',
+    q: "What does PixelCrew actually do?",
+    a: "We build brands and digital experiences—brand identity systems, UI/UX, and modern websites. From strategy and visual design to production-ready front‑end, we handle end‑to‑end.",
   },
   {
-    q: 'What industries do you work with?',
-    a: 'We’re industry‑agnostic. We’ve worked with education, arts, D2C, and services. What matters most is the problem and the impact—not the sector label.',
+    q: "What industries do you work with?",
+    a: "We’re industry‑agnostic. We’ve worked with education, arts, D2C, and services. What matters most is the problem and the impact—not the sector label.",
   },
   {
-    q: 'How do projects usually start?',
-    a: 'We kick off with a short discovery—goals, audience, constraints, and success metrics. Then we propose a clear scope, timeline, and deliverables. No fluff, just clarity.',
+    q: "How do projects usually start?",
+    a: "We kick off with a short discovery—goals, audience, constraints, and success metrics. Then we propose a clear scope, timeline, and deliverables. No fluff, just clarity.",
   },
   {
-    q: 'What’s your typical timeline?',
-    a: 'Brand identity: 2–4 weeks depending on depth. UI/UX and website design: 3–6 weeks based on scope. Design + development builds usually run 4–10 weeks.',
+    q: "What’s your typical timeline?",
+    a: "Brand identity: 2–4 weeks depending on depth. UI/UX and website design: 3–6 weeks based on scope. Design + development builds usually run 4–10 weeks.",
   },
   {
-    q: 'Do you provide development too?',
-    a: 'Yes. We design and develop. Our stack is modern (Next.js, React, Tailwind). We focus on clean UI, performance, accessibility, and smooth micro‑interactions.',
+    q: "Do you provide development too?",
+    a: "Yes. We design and develop. Our stack is modern (Next.js, React, Tailwind). We focus on clean UI, performance, accessibility, and smooth micro‑interactions.",
   },
   {
-    q: 'Can you work with my existing brand or website?',
-    a: 'Absolutely. We can refine and extend what you have, or overhaul where it helps most. We’ll suggest a pragmatic plan that respects your timelines and budget.',
+    q: "Can you work with my existing brand or website?",
+    a: "Absolutely. We can refine and extend what you have, or overhaul where it helps most. We’ll suggest a pragmatic plan that respects your timelines and budget.",
   },
   {
-    q: 'How do you price projects?',
-    a: 'Fixed‑scope projects are quoted upfront. Longer engagements can be retainer‑based. We keep estimates transparent and tie them to outcomes and deliverables.',
+    q: "How do you price projects?",
+    a: "Fixed‑scope projects are quoted upfront. Longer engagements can be retainer‑based. We keep estimates transparent and tie them to outcomes and deliverables.",
   },
   {
-    q: 'What do I get at the end of a branding project?',
-    a: 'A complete identity system: logo files (all formats), color and type specs, usage rules, and practical brand assets. Optionally: templates and a mini brand guide.',
+    q: "What do I get at the end of a branding project?",
+    a: "A complete identity system: logo files (all formats), color and type specs, usage rules, and practical brand assets. Optionally: templates and a mini brand guide.",
   },
   {
-    q: 'Will my website be mobile‑friendly and fast?',
-    a: 'Yes. We design mobile‑first and optimize for performance. We care about CLS, LCP, and a11y—not just how it looks, but how it loads and works.',
+    q: "Will my website be mobile‑friendly and fast?",
+    a: "Yes. We design mobile‑first and optimize for performance. We care about CLS, LCP, and a11y—not just how it looks, but how it loads and works.",
   },
   {
-    q: 'How do we get started?',
-    a: 'Drop us a message via the contact form. Share goals, references, and timelines if you have them. We’ll get back with a plan and next steps.',
+    q: "How do we get started?",
+    a: "Drop us a message via the contact form. Share goals, references, and timelines if you have them. We’ll get back with a plan and next steps.",
   },
 ];
 
@@ -54,32 +54,40 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="mx-auto w-full max-w-5xl px-6 py-16 sm:px-8">
-      <div className="divide-y divide-white/10 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] shadow-[0_0_60px_-20px_rgba(193,255,114,0.25)] backdrop-blur-md">
+    <section className="mx-auto w-full max-w-6xl px-6 py-16 sm:px-8">
+      <div className="divide-y divide-gray-700 overflow-hidden rounded-2xl border border-gray-700 bg-white shadow-lg">
         {faqs.map((item, i) => {
           const isOpen = openIndex === i;
           return (
             <div
               key={i}
-              className={`group transition-colors ${isOpen ? 'bg-white/[0.04]' : ''}`}
+              className={`group transition-colors ${
+                isOpen ? "bg-gray-50" : "bg-white"
+              }`}
             >
               <button
                 type="button"
                 aria-expanded={isOpen}
                 onClick={() => setOpenIndex(isOpen ? null : i)}
-                className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition-colors hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c1ff72]/50 sm:px-6 sm:py-5"
+                className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition-colors hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFD45C]/50 sm:px-6 sm:py-5"
               >
                 <div className="flex items-center gap-3">
                   <span
-                    className={`h-5 w-1 rounded-full transition-all ${isOpen ? 'bg-[#FFD45C]' : 'bg-white/10 group-hover:bg-white/20'}`}
+                    className={`h-5 w-1 rounded-full transition-all ${
+                      isOpen
+                        ? "bg-[#FFD45C]"
+                        : "bg-gray-300 group-hover:bg-gray-400"
+                    }`}
                   />
-                  <span className="text-slate-100 sm:text-lg">{item.q}</span>
+                  <span className="text-gray-900 font-medium sm:text-lg">
+                    {item.q}
+                  </span>
                 </div>
                 <span
-                  className={`grid h-8 w-8 place-items-center rounded-full border border-white/15 transition-all duration-200 ${
+                  className={`grid h-8 w-8 place-items-center rounded-full border transition-all duration-200 ${
                     isOpen
-                      ? 'rotate-45 bg-[#c1ff72]/10 text-[#c1ff72]'
-                      : 'text-slate-300'
+                      ? "rotate-45 bg-[#FFD45C]/20 text-[#FFD45C] border-[#FFD45C]"
+                      : "text-gray-600 border-gray-300"
                   }`}
                 >
                   <svg
@@ -99,7 +107,7 @@ const FAQ = () => {
               </button>
               {isOpen && (
                 <div className="px-4 pt-0 pb-4 sm:px-6 sm:pb-5">
-                  <p className="text-sm text-slate-300 sm:text-base">
+                  <p className="text-sm text-gray-700 sm:text-base leading-relaxed">
                     {item.a}
                   </p>
                 </div>

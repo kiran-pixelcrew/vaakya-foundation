@@ -7,41 +7,41 @@ const Footer = () => {
     {
       title: "About Us",
       links: [
-        { name: "Case Studies", href: "/case-studies" },
-        { name: "Reach & Stats", href: "/reach-stats" },
-        { name: "Testimonials", href: "/testimonials" },
-        { name: "chiguru", href: "/chiguru" },
-        { name: "Support Chiguru", href: "/support-chiguru" },
+        { name: "Our Vision & Mission", href: "/about#vision" },
+        { name: "Our Team", href: "/about#team" },
+        { name: "Why Vaakya", href: "/about#why" },
+        { name: "Partners", href: "/partners" },
+        { name: "Contact Us", href: "/contact" },
       ],
     },
     {
       title: "Programs",
       links: [
-        { name: "Case Studies", href: "/case-studies" },
-        { name: "Reach & Stats", href: "/reach-stats" },
-        { name: "Testimonials", href: "/testimonials" },
-        { name: "Infographics", href: "/infographics" },
-        { name: "Support Chiguru", href: "/support-chiguru" },
+        { name: "Overview", href: "/programs" },
+        { name: "Education Programs", href: "/programs/education" },
+        { name: "Community Development", href: "/programs/community" },
+        { name: "Skill Training", href: "/programs/training" },
+        { name: "Get Involved", href: "/programs/get-involved" },
       ],
     },
     {
       title: "Chiguru",
       links: [
-        { name: "Case Studies", href: "/case-studies" },
-        { name: "Reach & Stats", href: "/reach-stats" },
-        { name: "Testimonials", href: "/testimonials" },
-        { name: "chiguru", href: "/chiguru" },
+        { name: "About Chiguru", href: "/chiguru" },
+        { name: "How It Works", href: "/chiguru#how-it-works" },
+        { name: "Success Stories", href: "/chiguru#stories" },
         { name: "Support Chiguru", href: "/support-chiguru" },
+        { name: "Volunteer", href: "/chiguru/volunteer" },
       ],
     },
     {
       title: "Impact",
       links: [
         { name: "Case Studies", href: "/case-studies" },
-        { name: "Reach & Stats", href: "/reach-stats" },
+        { name: "Reach & Statistics", href: "/reach-stats" },
         { name: "Testimonials", href: "/testimonials" },
         { name: "Infographics", href: "/infographics" },
-        { name: "Support Chiguru", href: "/support-chiguru" },
+        { name: "Annual Reports", href: "/reports" },
       ],
     },
   ];
@@ -67,10 +67,11 @@ const Footer = () => {
           {/* Social Media Handles - Center (Desktop only) */}
           <div className="hidden md:flex flex-col items-center gap-4">
             <Link
-              href="https://facebook.com"
+              href="https://facebook.com/vaakyafoundation"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-80 transition-opacity"
+              aria-label="Follow us on Facebook"
             >
               <svg
                 className="w-6 h-6 fill-current text-gray-300 hover:text-[#FFD45C]"
@@ -81,10 +82,11 @@ const Footer = () => {
               </svg>
             </Link>
             <Link
-              href="https://twitter.com"
+              href="https://twitter.com/vaakyafoundation"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-80 transition-opacity"
+              aria-label="Follow us on Twitter"
             >
               <svg
                 className="w-6 h-6 fill-current text-gray-300 hover:text-[#FFD45C]"
@@ -95,10 +97,11 @@ const Footer = () => {
               </svg>
             </Link>
             <Link
-              href="https://instagram.com"
+              href="https://instagram.com/vaakyafoundation"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-80 transition-opacity"
+              aria-label="Follow us on Instagram"
             >
               <svg
                 className="w-6 h-6 fill-current text-gray-300 hover:text-[#FFD45C]"
@@ -109,10 +112,11 @@ const Footer = () => {
               </svg>
             </Link>
             <Link
-              href="https://linkedin.com"
+              href="https://linkedin.com/company/vaakyafoundation"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-80 transition-opacity"
+              aria-label="Follow us on LinkedIn"
             >
               <svg
                 className="w-6 h-6 fill-current text-gray-300 hover:text-[#FFD45C]"
@@ -123,10 +127,11 @@ const Footer = () => {
               </svg>
             </Link>
             <Link
-              href="https://youtube.com"
+              href="https://youtube.com/@vaakyafoundation"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-80 transition-opacity"
+              aria-label="Subscribe to our YouTube channel"
             >
               <svg
                 className="w-6 h-6 fill-current text-gray-300 hover:text-[#FFD45C]"
@@ -167,10 +172,11 @@ const Footer = () => {
         {/* Social Media - Mobile Only */}
         <div className="flex md:hidden items-center gap-6 mt-8 justify-center">
           <Link
-            href="https://facebook.com"
+            href="https://facebook.com/vaakyafoundation"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:opacity-80 transition-opacity"
+            aria-label="Follow us on Facebook"
           >
             <svg
               className="w-6 h-6 fill-current text-gray-300 hover:text-[#FFD45C]"
@@ -181,10 +187,11 @@ const Footer = () => {
             </svg>
           </Link>
           <Link
-            href="https://twitter.com"
+            href="https://twitter.com/vaakyafoundation"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:opacity-80 transition-opacity"
+            aria-label="Follow us on Twitter"
           >
             <svg
               className="w-6 h-6 fill-current text-gray-300 hover:text-[#FFD45C]"
@@ -195,10 +202,11 @@ const Footer = () => {
             </svg>
           </Link>
           <Link
-            href="https://instagram.com"
+            href="https://instagram.com/vaakyafoundation"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:opacity-80 transition-opacity"
+            aria-label="Follow us on Instagram"
           >
             <svg
               className="w-6 h-6 fill-current text-gray-300 hover:text-[#FFD45C]"
@@ -209,10 +217,11 @@ const Footer = () => {
             </svg>
           </Link>
           <Link
-            href="https://linkedin.com"
+            href="https://linkedin.com/company/vaakyafoundation"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:opacity-80 transition-opacity"
+            aria-label="Follow us on LinkedIn"
           >
             <svg
               className="w-6 h-6 fill-current text-gray-300 hover:text-[#FFD45C]"
@@ -223,10 +232,11 @@ const Footer = () => {
             </svg>
           </Link>
           <Link
-            href="https://youtube.com"
+            href="https://youtube.com/@vaakyafoundation"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:opacity-80 transition-opacity"
+            aria-label="Subscribe to our YouTube channel"
           >
             <svg
               className="w-6 h-6 fill-current text-gray-300 hover:text-[#FFD45C]"
@@ -236,6 +246,54 @@ const Footer = () => {
               <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
             </svg>
           </Link>
+        </div>
+
+        {/* Divider */}
+        <div className="border-t border-gray-700 mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            {/* Copyright */}
+            <p className="text-gray-400 text-sm text-center md:text-left">
+              © {new Date().getFullYear()} Vaakya Foundation. All rights
+              reserved.
+            </p>
+
+            {/* Legal Links */}
+            <div className="flex gap-6 text-sm">
+              <Link
+                href="/privacy-policy"
+                className="text-gray-400 hover:text-[#FFD45C] transition-colors"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/terms"
+                className="text-gray-400 hover:text-[#FFD45C] transition-colors"
+              >
+                Terms of Service
+              </Link>
+              <Link
+                href="/sitemap"
+                className="text-gray-400 hover:text-[#FFD45C] transition-colors"
+              >
+                Sitemap
+              </Link>
+            </div>
+          </div>
+
+          {/* Developer Credits */}
+          <div className="mt-6 text-center">
+            <p className="text-gray-500 text-xs">
+              Developed and maintained by{" "}
+              <Link
+                href="https://pixelcrew.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-[#FFD45C] transition-colors font-medium"
+              >
+                Pixelcrew
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

@@ -171,7 +171,7 @@ const Navbar = () => {
     },
     {
       name: "Chiguru",
-      link: "/chiguru",
+      link: "#chiguru",
     },
     {
       name: "Impact",

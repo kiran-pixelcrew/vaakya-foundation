@@ -10,27 +10,21 @@ const WhyVaakya = () => {
             Why Vakya Foundation?
           </h1>
           <p>
-            Because prevention saves more than reaction ever can. Vakya
-            Foundation believes that awareness is the first step toward
-            protection. We work to stop harm before it begins—whether it&apos;s
-            child abuse, bullying, cyber threats, or addiction.
-          </p>
-          <p>
-            Our programs focus on educating, empowering, and equipping
-            communities to stay safe. Through workshops, counseling, and
-            outreach, we reach children, parents, and educators alike. Our
-            flagship initiative, Project Chiguru, builds emotional resilience
-            and life skills among students. We create safe spaces for
-            conversations that are often ignored but deeply needed. Our team
-            blends compassion with expertise to bring real change at the ground
-            level.
-          </p>
-          <p>
-            We believe prevention is not just a choice—it&apos;s a
-            responsibility. Every awareness session plants a seed of safety and
-            confidence in a child&apos;s life. Every parent we reach becomes a
-            stronger guardian. And every school we partner with becomes a safer
-            community.
+            Children today are growing up in a fast-changing and complex world
+            facing challenges around safety, emotions, relationships, social
+            media, addictions and identity.
+            <p>
+              Nuclear families, single parents, double income households,
+              stakeholders battling between personal self time and family time
+              leave children to fend for themselves to learn and grow.
+            </p>
+            <p>
+              {" "}
+              Many do not have safe spaces to learn, ask questions, or express
+              themselves without fear or judgment. Stake holders also need all
+              the support guidance to match the generation’s gaps to give
+              children better environments to live and grow.
+            </p>
           </p>
         </div>
       </div>

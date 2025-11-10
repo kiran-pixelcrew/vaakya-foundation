@@ -15,11 +15,10 @@ const VisionMission = () => {
           </div>
           <div className="">
             <p className="text-base text-balance">
-              <span className="italic font-semibold">Vakya</span> believes in
-              acting before harm—creating informed communities that safeguard
-              every child&apos;s physical and emotional well-being. Vakya
-              believes in acting before harm—creating informed communities that
-              safeguard every child&apos;s physical and emotional well-being.{" "}
+              <span className="italic font-semibold">Vaakya</span> aims to build
+              safe, supportive, and inclusive communities and environments where
+              every child, young and old, grows with confidence, dignity, and
+              awareness; mapped through new-age technology
             </p>
           </div>
         </motion.div>
@@ -32,11 +31,11 @@ const VisionMission = () => {
           </div>
           <div className="">
             <p className="text-base text-balance">
-              <span className="italic font-semibold">Vakya</span> believes in
-              acting before harm—creating informed communities that safeguard
-              every child&apos;s physical and emotional well-being. Vakya
-              believes in acting before harm—creating informed communities that
-              safeguard every child&apos;s physical and emotional well-being.{" "}
+              <span className="italic font-semibold">Vaakya</span> aims to
+              support schools, families, and communities with training,
+              awareness programs, counselling support, and health clinics that
+              encourage openness, safety, inclusivity, and wellbeing for every
+              child.
             </p>
           </div>
         </motion.div>

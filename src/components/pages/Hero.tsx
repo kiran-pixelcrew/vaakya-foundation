@@ -89,7 +89,9 @@ export const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+        aria-labelledby="hero-heading"
       >
+        {/* Background image */}
         <Image
           src={hero0}
           alt="Children empowerment and safety initiative"
@@ -98,6 +100,15 @@ export const Hero = () => {
           placeholder="blur"
           sizes="100vw"
           className="object-cover object-center"
+        />
+        {/* Gradient / vignette overlay for readability */}
+        <div
+          className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.25)_60%,rgba(0,0,0,0.55)_100%)]"
+          aria-hidden="true"
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/40 to-transparent"
+          aria-hidden="true"
         />
         <motion.div
           className="relative z-10 max-w-4xl"
@@ -109,10 +120,15 @@ export const Hero = () => {
             ease: [0.25, 0.46, 0.45, 0.94],
           }}
         >
-          <TextGenerateEffect
-            wordsArray={words}
-            className="text-2xl sm:text-3xl md:text-4xl max-w-4xl text-balance lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-left"
-          />
+          <h1 id="hero-heading" className="sr-only">
+            Vaakya Foundation – Child Safety & Awareness
+          </h1>
+          <div aria-hidden="true">
+            <TextGenerateEffect
+              wordsArray={words}
+              className="text-2xl sm:text-3xl md:text-4xl max-w-4xl text-balance lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-left"
+            />
+          </div>
           <motion.div
             className="mt-4 text-base sm:text-lg text-balance text-white max-w-xl"
             initial={{ opacity: 0, y: 10 }}
@@ -176,11 +192,13 @@ export const Hero = () => {
                 transition: { duration: 0.05 },
               }}
             >
-              <Link href="#contact">
-                <Button className="bg-[#FFD45C] text-black font-medium py-4 sm:py-6 px-6 sm:px-8 rounded-lg text-base hover:bg-yellow-400 transition-colors border-0 w-full sm:w-auto">
-                  Protect a Child Today
-                </Button>
-              </Link>
+              <Button
+                asChild
+                aria-label="Protect a child today – contact us"
+                className="bg-[#FFD45C] text-black font-medium py-4 sm:py-6 px-6 sm:px-8 rounded-lg text-base hover:bg-yellow-400 transition-colors border-0 w-full sm:w-auto"
+              >
+                <Link href="#contact">Protect a Child Today</Link>
+              </Button>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, scale: 0.98 }}
@@ -199,14 +217,14 @@ export const Hero = () => {
                 transition: { duration: 0.05 },
               }}
             >
-              <Link href="#volunteer">
-                <Button
-                  variant="outline"
-                  className="border-2 border-white text-white font-medium py-4 sm:py-6 px-6 sm:px-8 rounded-lg text-base hover:bg-white hover:text-black transition-colors bg-transparent w-full sm:w-auto"
-                >
-                  Become Volunteer
-                </Button>
-              </Link>
+              <Button
+                asChild
+                aria-label="Become a volunteer"
+                variant="outline"
+                className="border-2 border-white text-white font-medium py-4 sm:py-6 px-6 sm:px-8 rounded-lg text-base hover:bg-white hover:text-black transition-colors bg-transparent w-full sm:w-auto"
+              >
+                <Link href="#volunteer">Become Volunteer</Link>
+              </Button>
             </motion.div>
           </motion.div>
         </motion.div>
@@ -267,19 +285,21 @@ export const Hero = () => {
 
                 {/* Buttons */}
                 <div className="flex flex-col gap-3">
-                  <Link href="#donate">
-                    <Button className="w-full bg-[#FFD45C] text-black font-semibold py-6 px-6 rounded-xl text-lg hover:bg-yellow-400 transition-colors border-0">
-                      Donate Now
-                    </Button>
-                  </Link>
-                  <Link href="#volunteer">
-                    <Button
-                      variant="outline"
-                      className="w-full border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white font-semibold py-6 px-6 rounded-xl text-lg hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
-                    >
-                      Become Volunteer
-                    </Button>
-                  </Link>
+                  <Button
+                    asChild
+                    aria-label="Donate now"
+                    className="w-full bg-[#FFD45C] text-black font-semibold py-6 px-6 rounded-xl text-lg hover:bg-yellow-400 transition-colors border-0"
+                  >
+                    <Link href="#donate">Donate Now</Link>
+                  </Button>
+                  <Button
+                    asChild
+                    aria-label="Become a volunteer"
+                    variant="outline"
+                    className="w-full border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white font-semibold py-6 px-6 rounded-xl text-lg hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
+                  >
+                    <Link href="#volunteer">Become Volunteer</Link>
+                  </Button>
                 </div>
               </div>
             </motion.div>

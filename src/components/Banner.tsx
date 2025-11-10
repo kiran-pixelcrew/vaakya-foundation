@@ -25,24 +25,27 @@ const Banner = ({
   ctaLink2: string;
 }) => {
   return (
-    <div className={`bg-[${bgColor}] py-12 px-4 relative md:px-40 my-12`}>
+    <div
+      className="py-12 px-4 relative md:px-40 z-99 my-12"
+      style={{ backgroundColor: bgColor || "transparent" }}
+    >
       <div className={`max-w-3xl space-y-6 ${cn}`}>
         <h2 className="text-3xl font-bold">{title}</h2>
         <p>{subtitle}</p>
-        <div className="space-x-6">
-          <Link href={ctaLink1}>
-            <Button className="bg-[#FFD45C] text-black px-4 text-base font-medium py-6">
-              {ctaText1}
-            </Button>
-          </Link>
-          <Link href={ctaLink2}>
-            <Button
-              variant={"outline"}
-              className="px-4 py-6 text-black text-base font-medium"
-            >
-              {ctaText2}
-            </Button>
-          </Link>
+        <div className="flex flex-wrap gap-4">
+          <Button
+            asChild
+            className="bg-[#FFD45C] hover:bg-[#FFD45C]/90 text-black px-4 text-base font-medium py-6 cursor-pointer"
+          >
+            <Link href={ctaLink1}>{ctaText1}</Link>
+          </Button>
+          <Button
+            asChild
+            variant={"outline"}
+            className="px-4 py-6 text-black text-base font-medium cursor-pointer hover:bg-gray-100"
+          >
+            <Link href={ctaLink2}>{ctaText2}</Link>
+          </Button>
         </div>
       </div>
       <div
