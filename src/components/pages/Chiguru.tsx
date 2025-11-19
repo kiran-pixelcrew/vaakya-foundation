@@ -56,7 +56,7 @@ export default function ChiguruPage() {
         {/* Content */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Image */}
-          <div className="relative w-full lg:col-span-5 aspect-[4/5] xl:aspect-[5/4] overflow-hidden rounded-2xl bg-gray-100 shadow-lg">
+          <div className="relative w-full lg:col-span-5 aspect-[4/5] xl:aspect-[4.5/4] overflow-hidden rounded-2xl bg-gray-100 shadow-lg">
             <Image
               src={currentTab?.image || "/team.png"}
               alt={currentTab?.label || "Child awareness"}
