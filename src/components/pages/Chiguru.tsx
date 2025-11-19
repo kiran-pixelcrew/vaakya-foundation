@@ -32,7 +32,7 @@ export default function ChiguruPage() {
   const currentTab = tabs.find((tab) => tab.id === activeTab);
 
   return (
-    <div className="min-h-screen bg-white py-12 px-4 md:px-40">
+    <div className="h-[80vh] bg-white py-12 px-4 md:px-40">
       <div className="">
         {/* Tabs */}
         <div className="mb-12">

@@ -58,7 +58,7 @@ const CaseStudy = () => {
   const [selectedCase, setSelectedCase] = useState(caseStudies[0]);
 
   return (
-    <section className="w-full py-16 md:px-40 px-4 bg-white">
+    <section className="w-full pt-12 pb-20 md:px-40 px-4 bg-white">
       <div className="">
         {/* Banner Image */}
         <div className="mb-8 rounded-lg overflow-hidden">
@@ -73,7 +73,7 @@ const CaseStudy = () => {
         </div>
 
         {/* Case Studies Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid mt-12 grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left Sidebar - Case Study List */}
           <div className="lg:col-span-1">
             <div className="space-y-2">
