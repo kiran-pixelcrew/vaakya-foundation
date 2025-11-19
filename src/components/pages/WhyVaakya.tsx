@@ -4,7 +4,7 @@ import React from "react";
 const WhyVaakya = () => {
   return (
     <div className="flex items-center w-auto my-10 md:my-20">
-      <div className="w-full max-w-7xl h-full bg-[#FFD45C] lg:pl-40 lg:pr-10 p-6 md:px-40 md:py-20">
+      <div className="w-full max-w-7xl h-full bg-[#FFD45C] lg:pl-40 lg:pr-10 p-6 md:px-40 md:py-20 rounded-r-xl">
         <div className="gap-4 md:gap-6 flex flex-col text-base md:text-lg">
           <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl">
             Why Vakya Foundation?

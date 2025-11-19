@@ -51,6 +51,7 @@ greater risk of suffering  long-lasting damage from issues like abuse, addiction
         <YtVideo />
       </section>
       <SectionSeparator
+        id="chiguru"
         title="Chiguru - Nurturing Growth and Awareness"
         subtitle="Project Chiguru helps children, parents, and educators grow together
           through awareness on bullying, cyber safety, sexuality education, and
@@ -117,7 +118,7 @@ bloom safely and confidently. One workshop can change a lifetime."
       />
       <section className="h-auto relative md:px-40 px-4 -mt-44 flex items-center justify-between ">
         <div className="">
-          <p className="max-w-xl text-2xl mt-20">
+          <p className="max-w-xl text-2xl mt-26">
             Every child deserves a safe tomorrow. Your support today builds
             courage, protects smiles, and turns fear into hope for thousands. Be
             their shield.

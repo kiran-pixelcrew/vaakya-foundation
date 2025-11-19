@@ -35,7 +35,7 @@ const teamMembers: TeamMember[] = [
 
 const Team = () => {
   return (
-    <div className="min-h-[80vh] overflow-hidden w-full flex items-start py-12 md:py-16 lg:py-20">
+    <div className="min-h-[80vh] overflow-hidden w-full flex items-start py-12 md:py-16 lg:py-12">
       <div className="container md:px-40 sm:max-w-9xl px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-16">
           {teamMembers.map((member) => (
