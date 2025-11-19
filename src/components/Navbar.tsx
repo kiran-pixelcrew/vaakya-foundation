@@ -210,11 +210,11 @@ const Navbar = () => {
               }}
             >
               <Image
-                src={"/logo.png"}
+                src={"/logo-black.png"}
                 alt="logo"
-                width={120}
-                height={40}
-                className={"md:h-[40px] md:w-[120px]"}
+                width={100}
+                height={100}
+                className={"aspect-auto h-16 w-auto"}
               />
             </Link>
           </div>

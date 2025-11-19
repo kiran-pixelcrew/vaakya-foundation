@@ -55,9 +55,9 @@ const Footer = () => {
           <div className="flex-shrink-0 w-full md:w-auto">
             <Link href="/">
               <Image
-                src="/logo.png"
+                src="/logo-white.png"
                 alt="Vaakya Foundation Logo"
-                width={150}
+                width={120}
                 height={60}
                 className="object-contain"
               />
