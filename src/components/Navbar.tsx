@@ -292,7 +292,7 @@ const Navbar = () => {
               transition={{ duration: 0.3, delay: 0.2 }}
               whileTap={{ scale: 0.8 }}
             >
-              <Link href={"#donate"} className="cursor-pointer ml-2">
+              <Link href={"/payments"} className="cursor-pointer ml-2">
                 <Button className="bg-[#FFD45C] hover:bg-[#FFD45C]/90 text-[#010101] cursor-pointer font-bold shadow-sm px-6 py-2">
                   Get Involved
                 </Button>
@@ -420,25 +420,7 @@ const Navbar = () => {
             whileTap={{ scale: 0.95 }}
             className="mt-8 w-4/5 max-w-sm"
           >
-            <Link
-              href={"#contact"}
-              onClick={(e) => {
-                e.preventDefault();
-                const targetElement = document.querySelector("#contact");
-                if (targetElement) {
-                  setMobileMenuOpen(false);
-                  setTimeout(() => {
-                    targetElement.scrollIntoView({
-                      behavior: "smooth",
-                      block: "start",
-                    });
-                  }, 300);
-                  setTimeout(() => {
-                    window.history.pushState(null, "", "#contact");
-                  }, 700);
-                }
-              }}
-            >
+            <Link href={"/payments"}>
               <Button className="w-full bg-[#FFD45C] hover:bg-[#FFD45C]/90 text-[#010101] font-bold text-xl py-6 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-[#FFD45C] hover:border-[#FFB800]">
                 Get Involved
               </Button>

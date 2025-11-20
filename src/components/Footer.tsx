@@ -24,7 +24,7 @@ const Footer = () => {
         { name: "Education Programs", href: "/programs/education" },
         { name: "Community Development", href: "/programs/community" },
         { name: "Skill Training", href: "/programs/training" },
-        { name: "Get Involved", href: "/programs/get-involved" },
+        { name: "Get Involved", href: "/payments" },
       ],
     },
     {
@@ -33,7 +33,7 @@ const Footer = () => {
         { name: "About Chiguru", href: "/chiguru" },
         { name: "How It Works", href: "/chiguru#how-it-works" },
         { name: "Success Stories", href: "/chiguru#stories" },
-        { name: "Support Chiguru", href: "/support-chiguru" },
+        { name: "Support Chiguru", href: "/payments" },
         { name: "Volunteer", href: "/chiguru/volunteer" },
       ],
     },

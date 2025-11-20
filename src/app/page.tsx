@@ -112,9 +112,9 @@ greater risk of suffering  long-lasting damage from issues like abuse, addiction
         subtitle="Your gift plants resilience in young hearts. Together, we help every child
 bloom safely and confidently. One workshop can change a lifetime."
         ctaText1="Support a Workshop"
-        ctaLink1="/workshop"
+        ctaLink1="/payments"
         ctaText2="Become a Volunteer"
-        ctaLink2="/workshop"
+        ctaLink2="/payments"
       />
       <section className="h-auto relative md:px-40 px-4 -mt-44 flex items-center justify-between ">
         <div className="">

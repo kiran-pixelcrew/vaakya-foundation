@@ -264,7 +264,7 @@ export const Hero = () => {
             }}
           >
             <Link
-              href="/workshop"
+              href="/payments"
               className="text-[#FFD45C] font-semibold hover:underline transition-all focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-black rounded inline-block"
             >
               Register now.
