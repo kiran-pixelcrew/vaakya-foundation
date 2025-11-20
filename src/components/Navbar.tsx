@@ -26,14 +26,16 @@ const Navbar = () => {
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
+    // IMPORTANT: Only lock vertical scrolling to avoid nuking the body's Tailwind class `overflow-x-hidden`.
+    // Setting `overflow` previously to "unset" re-enabled horizontal scrolling on mobile after menu interactions.
     if (mobileMenuOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflowY = "hidden"; // keep horizontal overflow-x hidden from layout
     } else {
-      document.body.style.overflow = "unset";
+      document.body.style.overflowY = ""; // restore natural vertical scroll without affecting overflow-x
     }
 
     return () => {
-      document.body.style.overflow = "unset";
+      document.body.style.overflowY = ""; // cleanup: ensure vertical scroll restored
     };
   }, [mobileMenuOpen]);
 
@@ -316,7 +318,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-40 backdrop-blur-xl transition-all duration-300 md:hidden ${
+        className={`fixed inset-0 w-auto z-40 backdrop-blur-xl transition-all duration-300 md:hidden overflow-x-hidden ${
           mobileMenuOpen
             ? "pointer-events-auto opacity-100"
             : "pointer-events-none opacity-0"
@@ -324,7 +326,7 @@ const Navbar = () => {
         onClick={() => setMobileMenuOpen(false)}
       >
         <div
-          className={`flex h-full flex-col items-center justify-center space-y-8 transition-all duration-500 ${
+          className={`flex h-full w-auto flex-col items-center justify-center space-y-8 transition-all duration-500 ${
             mobileMenuOpen
               ? "translate-y-0 opacity-100"
               : "-translate-y-10 opacity-0"
@@ -381,14 +383,14 @@ const Navbar = () => {
             return (
               <motion.div
                 key={link.name}
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 transition={{
                   duration: 0.4,
                   delay: mobileMenuOpen ? index * 0.1 : 0,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                whileHover={{ scale: 1.05, x: 10 }}
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Link

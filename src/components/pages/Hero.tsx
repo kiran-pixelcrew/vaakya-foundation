@@ -185,7 +185,7 @@ export const Hero = () => {
       </motion.section>
 
       {/* Mobile Version - Static Card */}
-      <section className="md:hidden mt-16 px-4 py-8">
+      <section className="md:hidden w-auto mt-20 pt-4 px-4 py-8">
         <div className="max-w-2xl mx-auto">
           {/* Image */}
           <div className="relative w-full aspect-[5/6] overflow-hidden rounded-lg">
