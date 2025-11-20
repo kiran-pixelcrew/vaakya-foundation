@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { motion, AnimatePresence } from "motion/react";
 
 const caseStudies = [
   {
@@ -107,7 +108,13 @@ const CaseStudy = () => {
     <section className="w-full pt-12 pb-20 md:px-40 px-4 bg-white">
       <div className="">
         {/* Banner Image */}
-        <div className="mb-8 rounded-lg overflow-hidden">
+        <motion.div
+          className="mb-8 rounded-lg overflow-hidden"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <Image
             src="/caseStudyBanner.png"
             alt="Children at Chiguru workshop"
@@ -116,15 +123,21 @@ const CaseStudy = () => {
             className="w-full h-auto object-cover"
             priority
           />
-        </div>
+        </motion.div>
 
         {/* Case Studies Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:divide-x lg:divide-gray-300">
+        <motion.div
+          className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:divide-x lg:divide-gray-300"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+        >
           {/* Left Sidebar - Case Study List */}
           <div className="lg:col-span-1 lg:pr-8">
             <div className="space-y-4">
-              {caseStudies.map((caseStudy) => (
-                <div
+              {caseStudies.map((caseStudy, index) => (
+                <motion.div
                   key={caseStudy.id}
                   onClick={() => setSelectedCase(caseStudy)}
                   className={`p-4 cursor-pointer transition-all duration-200 border-b-2 bg-white ${
@@ -132,6 +145,12 @@ const CaseStudy = () => {
                       ? "border-[#FFD45C]"
                       : "border-gray-200 hover:border-gray-300"
                   }`}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1, duration: 0.4 }}
+                  whileHover={{ x: 4, scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
@@ -146,12 +165,16 @@ const CaseStudy = () => {
                       </h3>
                       <p className="text-sm text-gray-500">{caseStudy.year}</p>
                     </div>
-                    <svg
-                      className={`w-5 h-5 flex-shrink-0 ml-3 transition-transform ${
-                        selectedCase.id === caseStudy.id
-                          ? "text-gray-900 rotate-45"
-                          : "text-gray-400"
-                      }`}
+                    <motion.svg
+                      className="w-5 h-5 flex-shrink-0 ml-3"
+                      animate={{
+                        rotate: selectedCase.id === caseStudy.id ? 45 : 0,
+                        color:
+                          selectedCase.id === caseStudy.id
+                            ? "#1a1a1a"
+                            : "#9ca3af",
+                      }}
+                      transition={{ duration: 0.2 }}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -162,38 +185,60 @@ const CaseStudy = () => {
                         strokeWidth={2}
                         d="M17 8l4 4m0 0l-4 4m4-4H3"
                       />
-                    </svg>
+                    </motion.svg>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
           {/* Right Content - Selected Case Study Details */}
           <div className="lg:col-span-2">
-            <div className="bg-white h-[600px] flex flex-col">
-              <div className="flex-shrink-0">
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-                  {selectedCase.title}
-                </h3>
-                <p className="text-xs text-gray-500">Read time - 3 min</p>
-              </div>
-              <div className="mt-2 overflow-y-auto flex-1 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-500">
-                <div className="prose prose-gray max-w-none">
-                  {selectedCase.content
-                    .split("\n\n")
-                    .map((paragraph, index) => (
-                      <p
-                        key={index}
-                        className="text-gray-700 text-base leading-relaxed mb-4 last:mb-0"
-                      >
-                        {paragraph}
-                      </p>
-                    ))}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={selectedCase.id}
+                className="bg-white h-[600px] flex flex-col"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="flex-shrink-0">
+                  <motion.h3
+                    className="text-2xl md:text-3xl font-bold text-gray-900 mb-2"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.1 }}
+                  >
+                    {selectedCase.title}
+                  </motion.h3>
+                  <p className="text-xs text-gray-500">Read time - 3 min</p>
                 </div>
-              </div>
-            </div>
+                <motion.div
+                  className="mt-2 overflow-y-auto flex-1 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-500"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                >
+                  <div className="prose prose-gray max-w-none">
+                    {selectedCase.content
+                      .split("\n\n")
+                      .map((paragraph, index) => (
+                        <motion.p
+                          key={index}
+                          className="text-gray-700 text-base leading-relaxed mb-4 last:mb-0"
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.1 * index, duration: 0.3 }}
+                        >
+                          {paragraph}
+                        </motion.p>
+                      ))}
+                  </div>
+                </motion.div>
+              </motion.div>
+            </AnimatePresence>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

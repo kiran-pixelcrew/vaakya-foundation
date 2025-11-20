@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 
 type FAQItem = {
   q: string;
@@ -55,40 +56,58 @@ const FAQ = () => {
 
   return (
     <section className="mx-auto w-full max-w-6xl px-6 py-16 sm:px-8">
-      <div className="divide-y divide-gray-700 overflow-hidden rounded-2xl border border-gray-700 bg-white shadow-lg">
+      <motion.div
+        className="divide-y divide-gray-700 overflow-hidden rounded-2xl border border-gray-700 bg-white shadow-lg"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.5 }}
+      >
         {faqs.map((item, i) => {
           const isOpen = openIndex === i;
           return (
-            <div
+            <motion.div
               key={i}
               className={`group transition-colors ${
                 isOpen ? "bg-gray-50" : "bg-white"
               }`}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.05, duration: 0.3 }}
             >
-              <button
+              <motion.button
                 type="button"
                 aria-expanded={isOpen}
                 onClick={() => setOpenIndex(isOpen ? null : i)}
                 className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition-colors hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFD45C]/50 sm:px-6 sm:py-5"
+                whileHover={{ x: 4 }}
+                transition={{ type: "spring", stiffness: 400, damping: 25 }}
               >
                 <div className="flex items-center gap-3">
-                  <span
-                    className={`h-5 w-1 rounded-full transition-all ${
-                      isOpen
-                        ? "bg-[#FFD45C]"
-                        : "bg-gray-300 group-hover:bg-gray-400"
-                    }`}
+                  <motion.span
+                    className="h-5 w-1 rounded-full"
+                    animate={{
+                      backgroundColor: isOpen ? "#FFD45C" : "#d1d5db",
+                      scale: isOpen ? [1, 1.2, 1] : 1,
+                    }}
+                    transition={{ duration: 0.3 }}
                   />
                   <span className="text-gray-900 font-medium sm:text-lg">
                     {item.q}
                   </span>
                 </div>
-                <span
-                  className={`grid h-8 w-8 place-items-center rounded-full border transition-all duration-200 ${
-                    isOpen
-                      ? "rotate-45 bg-[#FFD45C]/20 text-[#FFD45C] border-[#FFD45C]"
-                      : "text-gray-600 border-gray-300"
-                  }`}
+                <motion.span
+                  className="grid h-8 w-8 place-items-center rounded-full border"
+                  animate={{
+                    rotate: isOpen ? 45 : 0,
+                    backgroundColor: isOpen
+                      ? "rgba(255, 212, 92, 0.2)"
+                      : "transparent",
+                    borderColor: isOpen ? "#FFD45C" : "#d1d5db",
+                    color: isOpen ? "#FFD45C" : "#4b5563",
+                  }}
+                  transition={{ duration: 0.2 }}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -103,19 +122,34 @@ const FAQ = () => {
                       strokeLinecap="round"
                     />
                   </svg>
-                </span>
-              </button>
-              {isOpen && (
-                <div className="px-4 pt-0 pb-4 sm:px-6 sm:pb-5">
-                  <p className="text-sm text-gray-700 sm:text-base leading-relaxed">
-                    {item.a}
-                  </p>
-                </div>
-              )}
-            </div>
+                </motion.span>
+              </motion.button>
+              <AnimatePresence initial={false}>
+                {isOpen && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                    className="overflow-hidden"
+                  >
+                    <motion.div
+                      className="px-4 pt-0 pb-4 sm:px-6 sm:pb-5"
+                      initial={{ y: -10 }}
+                      animate={{ y: 0 }}
+                      transition={{ delay: 0.1, duration: 0.2 }}
+                    >
+                      <p className="text-sm text-gray-700 sm:text-base leading-relaxed">
+                        {item.a}
+                      </p>
+                    </motion.div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
           );
         })}
-      </div>
+      </motion.div>
     </section>
   );
 };

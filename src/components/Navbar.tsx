@@ -265,22 +265,23 @@ const Navbar = () => {
               };
 
               return (
-                <Link
+                <motion.div
                   key={link.name}
-                  href={link.link}
-                  onClick={handleClick}
-                  className={`relative cursor-pointer font-bold transition-all duration-300 ease-out hover:text-[#FFD45C] focus:text-[#FFD45C] focus:outline-none ${
-                    isActive
-                      ? "scale-105 text-[#FFD45C]"
-                      : "text-[#010101] hover:scale-105"
-                  }`}
-                  aria-current={isActive ? "page" : undefined}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
-                  <span className="relative z-10">{link.name}</span>
-                  {/* {isActive && (
-                    <span className="absolute inset-x-0 -bottom-1 h-0.5 animate-pulse rounded-full bg-[#C1FF72]" />
-                  )} */}
-                </Link>
+                  <Link
+                    href={link.link}
+                    onClick={handleClick}
+                    className={`relative cursor-pointer font-bold transition-all duration-300 ease-out hover:text-[#FFD45C] focus:text-[#FFD45C] focus:outline-none ${
+                      isActive ? "text-[#FFD45C]" : "text-[#010101]"
+                    }`}
+                    aria-current={isActive ? "page" : undefined}
+                  >
+                    <span className="relative z-10">{link.name}</span>
+                  </Link>
+                </motion.div>
               );
             })}
             <motion.div
@@ -315,7 +316,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-40 backdrop-blur-lg transition-all duration-300 md:hidden ${
+        className={`fixed inset-0 z-40 backdrop-blur-xl transition-all duration-300 md:hidden ${
           mobileMenuOpen
             ? "pointer-events-auto opacity-100"
             : "pointer-events-none opacity-0"
@@ -378,25 +379,31 @@ const Navbar = () => {
             };
 
             return (
-              <Link
+              <motion.div
                 key={link.name}
-                href={link.link}
-                onClick={handleMobileClick}
-                className={`group relative text-4xl font-bold transition-all duration-300 ease-out ${
-                  isActive ? "text-[#FFD45C]/90" : "text-[#010101]"
-                }`}
-                style={{
-                  transitionDelay: mobileMenuOpen ? `${index * 50}ms` : "0ms",
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                  duration: 0.4,
+                  delay: mobileMenuOpen ? index * 0.1 : 0,
+                  ease: [0.22, 1, 0.36, 1],
                 }}
-                aria-current={isActive ? "page" : undefined}
+                whileHover={{ scale: 1.05, x: 10 }}
+                whileTap={{ scale: 0.95 }}
               >
-                <span className="relative z-10 transition-all duration-300 group-hover:scale-110 group-hover:text-[#FFD45C]">
-                  {link.name}
-                </span>
-                {/* {isActive && (
-                  <span className="absolute inset-x-0 -bottom-2 h-1 animate-pulse rounded-full bg-[#C1FF72]" />
-                )} */}
-              </Link>
+                <Link
+                  href={link.link}
+                  onClick={handleMobileClick}
+                  className={`group relative text-4xl font-bold transition-all duration-300 ease-out ${
+                    isActive ? "text-[#FFD45C]/90" : "text-[#010101]"
+                  }`}
+                  aria-current={isActive ? "page" : undefined}
+                >
+                  <span className="relative z-10 transition-all duration-300 group-hover:text-[#FFD45C]">
+                    {link.name}
+                  </span>
+                </Link>
+              </motion.div>
             );
           })}
 

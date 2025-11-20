@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Button } from "./ui/button";
+import { motion } from "motion/react";
 
 const Banner = ({
   bgColor,
@@ -25,14 +26,39 @@ const Banner = ({
   ctaLink2: string;
 }) => {
   return (
-    <div
+    <motion.div
       className="py-12 px-4 relative md:px-40 z-99 my-12"
       style={{ backgroundColor: bgColor || "transparent" }}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className={`max-w-3xl space-y-6 ${cn}`}>
-        <h2 className="text-3xl font-bold">{title}</h2>
-        <p>{subtitle}</p>
-        <div className="flex flex-wrap gap-4">
+        <motion.h2
+          className="text-3xl font-bold"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+        >
+          {title}
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+        >
+          {subtitle}
+        </motion.p>
+        <motion.div
+          className="flex flex-wrap gap-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+        >
           <Button
             asChild
             className="bg-[#FFD45C] hover:bg-[#FFD45C]/90 text-black px-4 text-base font-medium py-6 cursor-pointer"
@@ -46,14 +72,20 @@ const Banner = ({
           >
             <Link href={ctaLink2}>{ctaText2}</Link>
           </Button>
-        </div>
+        </motion.div>
       </div>
-      <div
-        className={`absolute ${image ? "block" : "hidden"} right-32 -top-20`}
-      >
-        <Image src={"/whitefoot.png"} width={450} height={450} alt="foot" />
-      </div>
-    </div>
+      {image && (
+        <motion.div
+          className="absolute right-32 -top-20"
+          initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
+          whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <Image src={"/whitefoot.png"} width={450} height={450} alt="foot" />
+        </motion.div>
+      )}
+    </motion.div>
   );
 };
 

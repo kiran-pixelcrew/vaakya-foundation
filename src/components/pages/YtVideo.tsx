@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Edit, Trash2, Save, X } from "lucide-react";
+import { motion } from "motion/react";
 
 const YtVideo = () => {
   const [videoUrl, setVideoUrl] = useState(
@@ -132,15 +133,26 @@ const YtVideo = () => {
       )}
 
       {/* Video Player */}
-      <div className="w-full max-w-6xl">
-        <iframe
+      <motion.div
+        className="w-full max-w-6xl"
+        initial={{ opacity: 0, scale: 0.95, y: 30 }}
+        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <motion.iframe
           src={videoUrl}
           className="w-full aspect-video rounded-lg shadow-2xl"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           title="Vaakya Foundation Video"
-        ></iframe>
-      </div>
+          whileHover={{
+            scale: 1.02,
+            boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+          }}
+          transition={{ duration: 0.3 }}
+        ></motion.iframe>
+      </motion.div>
 
       {/* Admin Badge */}
       {isAdmin && (

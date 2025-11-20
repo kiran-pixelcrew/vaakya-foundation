@@ -72,6 +72,7 @@ greater risk of suffering  long-lasting damage from issues like abuse, addiction
         ctaLink2="/workshops"
       />
       <SectionSeparator
+        id="impact"
         title="Impact That Speaks for Itself"
         subtitle="With over 2000 students trained and growing presence across India, Vakya Foundation
         continues to strengthen awareness and prevention where it matters most."
