@@ -6,7 +6,7 @@ const WhyVaakya = () => {
   return (
     <div className="flex items-center w-auto my-10 md:my-20">
       <motion.div
-        className="w-full max-w-7xl h-full bg-[#FFD45C] lg:pl-40 lg:pr-10 p-6 md:px-40 md:py-20 rounded-r-xl"
+        className="w-full max-w-7xl h-full bg-[#FFD45C] lg:pl-40 lg:pr-10 p-6 md:px-40 md:py-20 rounded-r-none sm:rounded-r-xl"
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, margin: "-100px" }}
