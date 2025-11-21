@@ -88,7 +88,7 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    const sections = ["about", "programs", "impact"]
+    const sections = ["about", "impact"]
       .map((id) => document.getElementById(id))
       .filter((el): el is HTMLElement => !!el);
     if (sections.length === 0) return;
@@ -133,7 +133,7 @@ const Navbar = () => {
     const initializeActiveSection = () => {
       if (typeof window !== "undefined") {
         const hash = window.location.hash;
-        if (["#about", "#programs", "#impact"].includes(hash)) {
+        if (["#about", "#impact"].includes(hash)) {
           setActiveSection(hash);
         } else if (pathname === "/") {
           setActiveSection(null);
@@ -143,7 +143,7 @@ const Navbar = () => {
 
     const handleHashChange = () => {
       const hash = window.location.hash;
-      if (["#about", "#programs", "#impact"].includes(hash)) {
+      if (["#about", "#impact"].includes(hash)) {
         setActiveSection(hash);
       } else {
         setActiveSection(null);
@@ -166,10 +166,6 @@ const Navbar = () => {
     {
       name: "About us",
       link: "#aboutus",
-    },
-    {
-      name: "Programs",
-      link: "#programs",
     },
     {
       name: "Chiguru",

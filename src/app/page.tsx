@@ -25,7 +25,7 @@ export default function Home() {
       <section>
         <VisionMission />
       </section>
-      <section>
+      <section id="aboutus">
         <WhyVaakya />
       </section>
 
