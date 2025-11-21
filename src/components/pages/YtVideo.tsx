@@ -61,7 +61,7 @@ const YtVideo = () => {
   };
 
   return (
-    <div className="min-h-[80vh] w-full flex flex-col items-center justify-center p-4 md:p-20 lg:p-40 gap-6">
+    <div className="h-auto w-full flex flex-col items-center justify-center p-4 py-16 md:py-0 md:p-20 lg:p-40 gap-6">
       {/* Admin Controls */}
       {isAdmin && !isEditing && (
         <div className="flex gap-3 mb-4">

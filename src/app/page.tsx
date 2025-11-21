@@ -116,9 +116,9 @@ bloom safely and confidently. One workshop can change a lifetime."
         ctaText2="Become a Volunteer"
         ctaLink2="/payments"
       />
-      <section className="h-auto relative md:px-40 px-4 -mt-44 flex items-center justify-between ">
-        <div className="">
-          <p className="max-w-xl text-2xl mt-26">
+      <section className="h-auto relative md:px-40 px-4 -mt-44 md:flex flex-col md:flex-row items-center justify-between ">
+        <div className="py-12">
+          <p className="max-w-xl text-lg md:text-2xl mt-26">
             Every child deserves a safe tomorrow. Your support today builds
             courage, protects smiles, and turns fear into hope for thousands. Be
             their shield.

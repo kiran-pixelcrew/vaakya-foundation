@@ -34,6 +34,31 @@ const words = [
   ],
 ];
 
+const Mwords = [
+  [
+    { text: "Safe", color: "#000" },
+    { text: "Childhoods", color: "#000" },
+    { text: "Begin" },
+    { text: "with" },
+    { text: "Awareness" },
+  ],
+  [
+    { text: "Chiguru:", color: "#000" },
+    { text: "Nurturing", color: "#000" },
+    { text: "Young", color: "#000" },
+    { text: "Minds" },
+    { text: "with" },
+    { text: "Care" },
+  ],
+  [
+    { text: "Because", color: "#000" },
+    { text: "Every", color: "#000" },
+    { text: "Child", color: "#000" },
+    { text: "Deserves" },
+    { text: "Safety" },
+  ],
+];
+
 export const Hero = () => {
   return (
     <>
@@ -188,7 +213,7 @@ export const Hero = () => {
       <section className="md:hidden w-auto mt-20 pt-4 px-4 py-8">
         <div className="max-w-2xl mx-auto">
           {/* Image */}
-          <div className="relative w-full aspect-[5/6] overflow-hidden rounded-lg">
+          <div className="relative w-full aspect-[6/6] overflow-hidden rounded-lg">
             <Image
               src={mHero}
               alt="Let's Build a Safer World for Children"
@@ -202,7 +227,7 @@ export const Hero = () => {
           <div className="pb-8">
             <div aria-hidden="true">
               <TextGenerateEffect
-                wordsArray={words}
+                wordsArray={Mwords}
                 className="text-4xl text-black sm:text-3xl md:text-4xl max-w-4xl text-balance lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-left"
               />
             </div>

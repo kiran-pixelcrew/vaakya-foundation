@@ -32,11 +32,11 @@ export default function ChiguruPage() {
   const currentTab = tabs.find((tab) => tab.id === activeTab);
 
   return (
-    <div className="h-[80vh] bg-white py-12 px-4 md:px-40">
+    <div className="h-auto bg-white py-12 px-4 md:px-40">
       <div className="">
         {/* Tabs */}
         <div className="mb-12">
-          <div className="flex flex-wrap gap-3 md:gap-4 justify-center md:justify-start">
+          <div className="flex flex-wrap gap-3 md:gap-4 md:justify-start">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
@@ -56,12 +56,12 @@ export default function ChiguruPage() {
         {/* Content */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Image */}
-          <div className="relative w-full lg:col-span-5 aspect-[4/5] xl:aspect-[4.5/4] overflow-hidden rounded-2xl bg-gray-100 shadow-lg">
+          <div className="relative w-full lg:col-span-5 aspect-[7/4] xl:aspect-[4.5/4] overflow-hidden rounded-2xl shadow-lg">
             <Image
               src={currentTab?.image || "/team.png"}
               alt={currentTab?.label || "Child awareness"}
               fill
-              className="object-cover transition-all duration-500 hover:scale-105"
+              className="object-cover object-center transition-all duration-500 hover:scale-105"
               priority
             />
           </div>
@@ -69,7 +69,7 @@ export default function ChiguruPage() {
           {/* Text Content */}
           <div className="space-y-6 lg:col-span-7 animate-fadeIn">
             {activeTab === "bullying" && (
-              <div className="pl-7">
+              <div className="md:pl-7 pl-0">
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                   Bullying & Cyber Safety
                 </h3>

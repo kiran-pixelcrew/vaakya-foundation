@@ -36,7 +36,7 @@ const Banner = ({
     >
       <div className={`max-w-3xl space-y-6 ${cn}`}>
         <motion.h2
-          className="text-3xl font-bold"
+          className="text-3xl font-bold text-balance"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -61,14 +61,14 @@ const Banner = ({
         >
           <Button
             asChild
-            className="bg-[#FFD45C] hover:bg-[#FFD45C]/90 text-black px-4 text-base font-medium py-6 cursor-pointer"
+            className="bg-[#FFD45C] w-full md:w-auto hover:bg-[#FFD45C]/90 text-black px-4 text-base font-bold py-6 cursor-pointer"
           >
             <Link href={ctaLink1}>{ctaText1}</Link>
           </Button>
           <Button
             asChild
             variant={"outline"}
-            className="px-4 py-6 text-black text-base font-medium cursor-pointer hover:bg-gray-100"
+            className="px-4 py-6 w-full md:w-auto text-black text-base font-bold cursor-pointer hover:bg-gray-100"
           >
             <Link href={ctaLink2}>{ctaText2}</Link>
           </Button>
@@ -76,7 +76,7 @@ const Banner = ({
       </div>
       {image && (
         <motion.div
-          className="absolute right-32 -top-20"
+          className="absolute hidden md:block right-32 -top-20"
           initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
           whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
           viewport={{ once: true }}
