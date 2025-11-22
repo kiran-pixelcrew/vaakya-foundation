@@ -36,7 +36,7 @@ export default function ChiguruPage() {
       <div className="">
         {/* Tabs */}
         <div className="mb-12">
-          <div className="flex flex-wrap gap-3 md:gap-4 md:justify-start">
+          <div className="md:flex grid grid-cols-2 flex-wrap gap-3 md:gap-4 md:justify-start">
             {tabs.map((tab) => (
               <button
                 key={tab.id}

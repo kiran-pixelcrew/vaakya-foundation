@@ -53,7 +53,7 @@ const Team = () => {
               }}
             >
               <motion.div
-                className="relative w-full aspect-[3/4] overflow-hidden group cursor-pointer"
+                className="relative w-full md:aspect-[3/4] aspect-[5/5] overflow-hidden group cursor-pointer"
                 whileHover={{ y: -8 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >

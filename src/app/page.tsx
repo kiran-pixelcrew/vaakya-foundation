@@ -22,10 +22,10 @@ export default function Home() {
       <section>
         <Hero />
       </section>
-      <section>
+      <section id="aboutus">
         <VisionMission />
       </section>
-      <section id="aboutus">
+      <section>
         <WhyVaakya />
       </section>
 

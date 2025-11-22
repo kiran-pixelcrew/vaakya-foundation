@@ -61,7 +61,7 @@ const YtVideo = () => {
   };
 
   return (
-    <div className="h-auto w-full flex flex-col items-center justify-center p-4 py-16 md:py-0 md:p-20 lg:p-40 gap-6">
+    <div className="h-auto w-full flex flex-col items-center justify-center px-4 pt-12 md:py-0 md:p-20 lg:p-40 gap-6">
       {/* Admin Controls */}
       {isAdmin && !isEditing && (
         <div className="flex gap-3 mb-4">
@@ -142,13 +142,12 @@ const YtVideo = () => {
       >
         <motion.iframe
           src={videoUrl}
-          className="w-full aspect-video rounded-lg shadow-2xl"
+          className="w-full aspect-video rounded-lg"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           title="Vaakya Foundation Video"
           whileHover={{
             scale: 1.02,
-            boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
           }}
           transition={{ duration: 0.3 }}
         ></motion.iframe>
