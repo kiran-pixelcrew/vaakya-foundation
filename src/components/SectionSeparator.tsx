@@ -6,6 +6,7 @@ interface SectionSeparatorProps {
   id?: string;
   sTcN?: string;
   tcN?: string;
+  cN?: string;
 }
 
 const SectionSeparator: React.FC<SectionSeparatorProps> = ({
@@ -14,11 +15,12 @@ const SectionSeparator: React.FC<SectionSeparatorProps> = ({
   id,
   sTcN,
   tcN,
+  cN,
 }) => {
   return (
     <section
       id={id}
-      className="relative sm:px-0 px-4 w-full bg-[#fff] pt-12 md:px-40"
+      className={`relative sm:px-0 px-4 w-full  pt-12 md:px-40 ${cN}`}  
     >
       <div className="text-left">
         <h2

@@ -1,20 +1,20 @@
 "use client";
 
 import Banner from "@/components/Banner";
-import CaseStudy from "@/components/pages/CaseStudy";
 import ChiguruPage from "@/components/pages/Chiguru";
 import FAQ from "@/components/pages/FAQ";
 import { Hero } from "@/components/pages/Hero";
 import Partners from "@/components/pages/Partners";
 import Stat from "@/components/pages/Stat";
-import Team from "@/components/pages/Team";
+import Founder from "@/components/pages/Founder";
 import TestimonialsWithInfiniteScroll from "@/components/pages/TestimonialsWithInfiniteScroll";
 import VisionMission from "@/components/pages/VisionMission";
 import WhyVaakya from "@/components/pages/WhyVaakya";
 import YtVideo from "@/components/pages/YtVideo";
 import SectionSeparator from "@/components/SectionSeparator";
-// import { Vaakyatext } from "@/components/Vaakyatext";
+import { Vaakyatext } from "@/components/Vaakyatext";
 import Image from "next/image";
+import { SimpleBanner } from "@/components/SimpleBanner";
 
 export default function Home() {
   return (
@@ -22,11 +22,22 @@ export default function Home() {
       <section>
         <Hero />
       </section>
+      <SimpleBanner/>
       <section id="aboutus">
         <VisionMission />
       </section>
       <section>
         <WhyVaakya />
+      </section>
+      <SectionSeparator 
+        cN="bg-[#FFF7E1] container mx-auto rounded-lg"
+        id="founder"
+        title="Meet Our Founder"
+        subtitle="A lifelong commitment to children, schools, and the educators who shape their futures."
+        sTcN="max-w-2xl"
+      />
+      <section>
+        <Founder />
       </section>
 
       {/* <SectionSeparator
@@ -36,15 +47,16 @@ export default function Home() {
       <section>
         <WhatWeDo />
       </section> */}
-      <SectionSeparator
+      {/* <SectionSeparator
+      cN="mt-12"
         title="One team one dream"
         subtitle="Children are the most vulnerable members of society, and without proper  education and support, they are at
 greater risk of suffering  long-lasting damage from issues like abuse, addiction, and bullying"
       />
       <section>
         <Team />
-      </section>
-      <section>
+      </section> */}
+      <section className="mt-24">
         <Partners />
       </section>
       <section>
@@ -80,13 +92,13 @@ greater risk of suffering  long-lasting damage from issues like abuse, addiction
       <section>
         <Stat />
       </section>
-      <SectionSeparator
+      {/* <SectionSeparator
         title="Case studies: Lives Touched, Futures Protected"
         subtitle="See how Chiguru transformed lives. One workshop, lifelong safety."
       />
       <section>
         <CaseStudy />
-      </section>
+      </section> */}
       <SectionSeparator
         title="Voices of Hope"
         subtitle="Parents, teachers, and kids speak. Their trust warms our hearts."
@@ -134,9 +146,9 @@ bloom safely and confidently. One workshop can change a lifetime."
           />
         </div>
       </section>
-      {/* <section>
+      <section>
         <Vaakyatext />
-      </section> */}
+      </section>
     </div>
   );
 }

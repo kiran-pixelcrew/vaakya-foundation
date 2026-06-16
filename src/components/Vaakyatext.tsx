@@ -46,7 +46,7 @@ export const Vaakyatext = () => {
 
         <motion.h1
           style={{ x: x2, opacity: opacity2 }}
-          className="text-[115px] text-black/90 font-helvetica text-balance text-center uppercase font-semibold"
+          className="text-[115px] text-balance text-center uppercase font-semibold outline-text"
         >
           Vaakya Foundation
         </motion.h1>
