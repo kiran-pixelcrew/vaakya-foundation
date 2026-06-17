@@ -6,8 +6,6 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import { motion } from "motion/react";
 import Image from "next/image";
-import hero0 from "/public/hero0.png";
-import mHero from "/public/mobileHero.png";
 
 const words = [
   [
@@ -72,7 +70,7 @@ export const Hero = () => {
       >
         {/* Background image */}
         <Image
-          src={hero0}
+          src="/hero0.png"
           alt="Children empowerment and safety initiative"
           fill
           priority
@@ -215,7 +213,7 @@ export const Hero = () => {
           {/* Image */}
           <div className="relative w-full aspect-[6/6] overflow-hidden rounded-lg">
             <Image
-              src={mHero}
+              src="/mobileHero.png"
               alt="Let's Build a Safer World for Children"
               fill
               priority
