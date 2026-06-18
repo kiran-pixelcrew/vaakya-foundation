@@ -10,44 +10,44 @@ type FAQItem = {
 
 const faqs: FAQItem[] = [
   {
-    q: "What does PixelCrew actually do?",
-    a: "We build brands and digital experiences—brand identity systems, UI/UX, and modern websites. From strategy and visual design to production-ready front‑end, we handle end‑to‑end.",
+    q: "What is Vaakya Foundation?",
+    a: "Vaakya Foundation is a nonprofit that works with schools, families, and communities to create safe, supportive environments for children. We run awareness programs, counselling support, and workshops on child safety, emotional well-being, and digital responsibility.",
   },
   {
-    q: "What industries do you work with?",
-    a: "We’re industry‑agnostic. We’ve worked with education, arts, D2C, and services. What matters most is the problem and the impact—not the sector label.",
+    q: "What is Project Chiguru?",
+    a: "Chiguru is our flagship program that helps children, parents, and educators grow together through workshops on bullying, cyber safety, sexuality education, and mental health—building awareness and resilience in every community.",
   },
   {
-    q: "How do projects usually start?",
-    a: "We kick off with a short discovery—goals, audience, constraints, and success metrics. Then we propose a clear scope, timeline, and deliverables. No fluff, just clarity.",
+    q: "Who can attend your workshops?",
+    a: "Our workshops are designed for students, parents, teachers, and school management. Sessions are tailored to each audience—interactive, age-appropriate, and practical so everyone can apply what they learn.",
   },
   {
-    q: "What’s your typical timeline?",
-    a: "Brand identity: 2–4 weeks depending on depth. UI/UX and website design: 3–6 weeks based on scope. Design + development builds usually run 4–10 weeks.",
+    q: "How can my school request a workshop?",
+    a: "Schools can reach out through our website to request a workshop or explore upcoming sessions. We work with management to plan programs that fit your school's needs and schedule.",
   },
   {
-    q: "Do you provide development too?",
-    a: "Yes. We design and develop. Our stack is modern (Next.js, React, Tailwind). We focus on clean UI, performance, accessibility, and smooth micro‑interactions.",
+    q: "What topics do you cover?",
+    a: "We cover bullying prevention, cyber safety, sexuality education, mental health awareness, POCSO Act awareness, teacher support, and counselling for children. Our founder brings over 26 years of experience in experiential learning and child welfare.",
   },
   {
-    q: "Can you work with my existing brand or website?",
-    a: "Absolutely. We can refine and extend what you have, or overhaul where it helps most. We’ll suggest a pragmatic plan that respects your timelines and budget.",
+    q: "Where does Vaakya Foundation work?",
+    a: "We are active across multiple states in India, with strong roots in South Karnataka. We have reached 20+ schools and trained over 2,000 students, and we continue to expand our presence.",
   },
   {
-    q: "How do you price projects?",
-    a: "Fixed‑scope projects are quoted upfront. Longer engagements can be retainer‑based. We keep estimates transparent and tie them to outcomes and deliverables.",
+    q: "How can I support Vaakya Foundation?",
+    a: "You can support a workshop, make a donation, or volunteer your time. Visit our payments page to contribute—your support helps us reach more children and create safer environments for them to grow.",
   },
   {
-    q: "What do I get at the end of a branding project?",
-    a: "A complete identity system: logo files (all formats), color and type specs, usage rules, and practical brand assets. Optionally: templates and a mini brand guide.",
+    q: "Is Vaakya Foundation only for schools?",
+    a: "While schools are a core focus, we also work with families and communities. Our goal is to support everyone involved in a child's life—parents, educators, and caregivers—so children grow with confidence, dignity, and awareness.",
   },
   {
-    q: "Will my website be mobile‑friendly and fast?",
-    a: "Yes. We design mobile‑first and optimize for performance. We care about CLS, LCP, and a11y—not just how it looks, but how it loads and works.",
+    q: "What makes Vaakya's approach different?",
+    a: "We combine experiential learning with active counselling and skill facilitation. Rather than one-off talks, we create safe spaces where children can ask questions, express themselves, and learn without fear or judgment.",
   },
   {
-    q: "How do we get started?",
-    a: "Drop us a message via the contact form. Share goals, references, and timelines if you have them. We’ll get back with a plan and next steps.",
+    q: "How do I get in touch?",
+    a: "Use the contact options on our website or visit the payments page to register for workshops or support our work. We welcome enquiries from schools, parents, and partners who share our mission for child safety and well-being.",
   },
 ];
 

@@ -12,7 +12,7 @@ import VisionMission from "@/components/pages/VisionMission";
 import WhyVaakya from "@/components/pages/WhyVaakya";
 import YtVideo from "@/components/pages/YtVideo";
 import SectionSeparator from "@/components/SectionSeparator";
-import { Vaakyatext } from "@/components/Vaakyatext";
+// import { Vaakyatext } from "@/components/Vaakyatext";
 import Image from "next/image";
 import { SimpleBanner } from "@/components/SimpleBanner";
 
@@ -128,27 +128,27 @@ bloom safely and confidently. One workshop can change a lifetime."
         ctaText2="Become a Volunteer"
         ctaLink2="/payments"
       />
-      <section className="h-auto relative md:px-40 px-4 -mt-44 md:flex flex-col md:flex-row items-center justify-between ">
-        <div className="py-12">
-          <p className="max-w-xl text-lg md:text-2xl mt-26">
+      <section className="px-4 pt-8 md:px-40 md:pt-12">
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 md:flex-row md:items-end md:justify-between md:gap-12">
+          <p className="max-w-xl pb-8 text-center text-lg md:pb-10 md:text-left md:text-2xl">
             Every child deserves a safe tomorrow. Your support today builds
             courage, protects smiles, and turns fear into hope for thousands. Be
             their shield.
           </p>
-        </div>
-        <div className="z-99">
-          <Image
-            src={"/vaakya-below.png"}
-            className="z-99"
-            width={600}
-            height={600}
-            alt="low"
-          />
+          <div className="flex w-full shrink-0 justify-center md:w-auto md:justify-end">
+            <Image
+              src="/vaakya-below.png"
+              width={751}
+              height={507}
+              alt="Vaakya Foundation children"
+              className="block h-auto w-full max-w-xs object-contain sm:max-w-sm md:max-w-md lg:max-w-[420px]"
+            />
+          </div>
         </div>
       </section>
-      <section>
+      {/* <section>
         <Vaakyatext />
-      </section>
+      </section> */}
     </div>
   );
 }
